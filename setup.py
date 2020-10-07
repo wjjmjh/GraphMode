@@ -46,5 +46,12 @@ setup(
     package_dir={"": "src"},
     install_requires=["Cython"],
     extras_require={"dev": []},
-    ext_modules=cythonize([CythonExtension("gm.hello_world"),]),
+    ext_modules=cythonize(
+        [
+            CythonExtension("gm.hello_world"),
+            CythonExtension("gm.comparison_based_sorting"),
+            CythonExtension("gm.Dijkstra"),
+            CythonExtension("gm.dynamic_programming"),
+        ]
+    ),
 )
