@@ -1041,29 +1041,23 @@ static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_print[] = "print";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_influence_of_a_vertex[] = "influence_of_a_vertex";
 static const char __pyx_k_gm_dynamic_programming[] = "gm.dynamic_programming";
 static const char __pyx_k_src_gm_dynamic_programming_pyx[] = "src/gm/dynamic_programming.pyx";
 static const char __pyx_k_dynamic_programming_to_find_the[] = "dynamic_programming_to_find_the_shortest_path";
 static const char __pyx_k_func_dynamic_programming_to_find[] = "func dynamic_programming_to_find_the_shortest_path is under construction.";
-static const char __pyx_k_func_influence_of_a_vertex_is_un[] = "func influence_of_a_vertex is under construction.";
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_dynamic_programming_to_find_the;
 static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_file;
 static PyObject *__pyx_kp_s_func_dynamic_programming_to_find;
-static PyObject *__pyx_kp_s_func_influence_of_a_vertex_is_un;
 static PyObject *__pyx_n_s_gm_dynamic_programming;
-static PyObject *__pyx_n_s_influence_of_a_vertex;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_kp_s_src_gm_dynamic_programming_pyx;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_the_shortest_path(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_2gm_19dynamic_programming_2influence_of_a_vertex(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_codeobj_;
-static PyObject *__pyx_codeobj__2;
 /* Late includes */
 
 /* "gm/dynamic_programming.pyx":3
@@ -1071,7 +1065,6 @@ static PyObject *__pyx_codeobj__2;
  * 
  * def dynamic_programming_to_find_the_shortest_path():             # <<<<<<<<<<<<<<
  *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
- * 
  */
 
 /* Python wrapper */
@@ -1100,8 +1093,6 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
  * 
  * def dynamic_programming_to_find_the_shortest_path():
  *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")             # <<<<<<<<<<<<<<
- * 
- * def influence_of_a_vertex():
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_func_dynamic_programming_to_find) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
 
@@ -1110,7 +1101,6 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
  * 
  * def dynamic_programming_to_find_the_shortest_path():             # <<<<<<<<<<<<<<
  *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
- * 
  */
 
   /* function exit code */
@@ -1118,61 +1108,6 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_AddTraceback("gm.dynamic_programming.dynamic_programming_to_find_the_shortest_path", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "gm/dynamic_programming.pyx":6
- *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
- * 
- * def influence_of_a_vertex():             # <<<<<<<<<<<<<<
- *     print("func influence_of_a_vertex is under construction.")
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_2gm_19dynamic_programming_3influence_of_a_vertex(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_2gm_19dynamic_programming_3influence_of_a_vertex = {"influence_of_a_vertex", (PyCFunction)__pyx_pw_2gm_19dynamic_programming_3influence_of_a_vertex, METH_NOARGS, 0};
-static PyObject *__pyx_pw_2gm_19dynamic_programming_3influence_of_a_vertex(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("influence_of_a_vertex (wrapper)", 0);
-  __pyx_r = __pyx_pf_2gm_19dynamic_programming_2influence_of_a_vertex(__pyx_self);
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_2gm_19dynamic_programming_2influence_of_a_vertex(CYTHON_UNUSED PyObject *__pyx_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("influence_of_a_vertex", 0);
-
-  /* "gm/dynamic_programming.pyx":7
- * 
- * def influence_of_a_vertex():
- *     print("func influence_of_a_vertex is under construction.")             # <<<<<<<<<<<<<<
- */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_func_influence_of_a_vertex_is_un) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
-
-  /* "gm/dynamic_programming.pyx":6
- *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
- * 
- * def influence_of_a_vertex():             # <<<<<<<<<<<<<<
- *     print("func influence_of_a_vertex is under construction.")
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_AddTraceback("gm.dynamic_programming.influence_of_a_vertex", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1231,9 +1166,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
   {&__pyx_kp_s_func_dynamic_programming_to_find, __pyx_k_func_dynamic_programming_to_find, sizeof(__pyx_k_func_dynamic_programming_to_find), 0, 0, 1, 0},
-  {&__pyx_kp_s_func_influence_of_a_vertex_is_un, __pyx_k_func_influence_of_a_vertex_is_un, sizeof(__pyx_k_func_influence_of_a_vertex_is_un), 0, 0, 1, 0},
   {&__pyx_n_s_gm_dynamic_programming, __pyx_k_gm_dynamic_programming, sizeof(__pyx_k_gm_dynamic_programming), 0, 0, 1, 1},
-  {&__pyx_n_s_influence_of_a_vertex, __pyx_k_influence_of_a_vertex, sizeof(__pyx_k_influence_of_a_vertex), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
@@ -1254,17 +1187,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  * def dynamic_programming_to_find_the_shortest_path():             # <<<<<<<<<<<<<<
  *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
- * 
  */
   __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_dynamic_programming_pyx, __pyx_n_s_dynamic_programming_to_find_the, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 3, __pyx_L1_error)
-
-  /* "gm/dynamic_programming.pyx":6
- *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
- * 
- * def influence_of_a_vertex():             # <<<<<<<<<<<<<<
- *     print("func influence_of_a_vertex is under construction.")
- */
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_dynamic_programming_pyx, __pyx_n_s_influence_of_a_vertex, 6, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1550,22 +1474,10 @@ if (!__Pyx_RefNanny) {
  * 
  * def dynamic_programming_to_find_the_shortest_path():             # <<<<<<<<<<<<<<
  *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
- * 
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path, NULL, __pyx_n_s_gm_dynamic_programming); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_dynamic_programming_to_find_the, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "gm/dynamic_programming.pyx":6
- *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
- * 
- * def influence_of_a_vertex():             # <<<<<<<<<<<<<<
- *     print("func influence_of_a_vertex is under construction.")
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_19dynamic_programming_3influence_of_a_vertex, NULL, __pyx_n_s_gm_dynamic_programming); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_influence_of_a_vertex, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "gm/dynamic_programming.pyx":1
