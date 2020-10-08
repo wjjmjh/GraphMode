@@ -1044,10 +1044,10 @@ static const char __pyx_k_gm_Dijkstra[] = "gm.Dijkstra";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_src_gm_Dijkstra_pyx[] = "src/gm/Dijkstra.pyx";
 static const char __pyx_k_influence_of_a_vertex[] = "influence_of_a_vertex";
-static const char __pyx_k_Dijkstra_to_find_shortest_paths[] = "Dijkstra_to_find_shortest_paths";
+static const char __pyx_k_Dijkstra_to_find_shortest_distan[] = "Dijkstra_to_find_shortest_distances";
 static const char __pyx_k_func_Dijkstra_to_find_shortest_p[] = "func Dijkstra_to_find_shortest_paths is under construction.";
 static const char __pyx_k_func_influence_of_a_vertex_is_un[] = "func influence_of_a_vertex is under construction.";
-static PyObject *__pyx_n_s_Dijkstra_to_find_shortest_paths;
+static PyObject *__pyx_n_s_Dijkstra_to_find_shortest_distan;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_file;
@@ -1060,7 +1060,7 @@ static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_kp_s_src_gm_Dijkstra_pyx;
 static PyObject *__pyx_n_s_test;
-static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_paths(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_codeobj_;
 static PyObject *__pyx_codeobj__2;
@@ -1069,36 +1069,36 @@ static PyObject *__pyx_codeobj__2;
 /* "gm/Dijkstra.pyx":3
  * # Under construction
  * 
- * def Dijkstra_to_find_shortest_paths():             # <<<<<<<<<<<<<<
+ * def Dijkstra_to_find_shortest_distances():             # <<<<<<<<<<<<<<
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
  * 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_paths(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_2gm_8Dijkstra_1Dijkstra_to_find_shortest_paths = {"Dijkstra_to_find_shortest_paths", (PyCFunction)__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_paths, METH_NOARGS, 0};
-static PyObject *__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_paths(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances = {"Dijkstra_to_find_shortest_distances", (PyCFunction)__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances, METH_NOARGS, 0};
+static PyObject *__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Dijkstra_to_find_shortest_paths (wrapper)", 0);
-  __pyx_r = __pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_paths(__pyx_self);
+  __Pyx_RefNannySetupContext("Dijkstra_to_find_shortest_distances (wrapper)", 0);
+  __pyx_r = __pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_paths(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("Dijkstra_to_find_shortest_paths", 0);
+  __Pyx_RefNannySetupContext("Dijkstra_to_find_shortest_distances", 0);
 
   /* "gm/Dijkstra.pyx":4
  * 
- * def Dijkstra_to_find_shortest_paths():
+ * def Dijkstra_to_find_shortest_distances():
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")             # <<<<<<<<<<<<<<
  * 
  * def influence_of_a_vertex():
@@ -1108,7 +1108,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_paths(CYTHON_U
   /* "gm/Dijkstra.pyx":3
  * # Under construction
  * 
- * def Dijkstra_to_find_shortest_paths():             # <<<<<<<<<<<<<<
+ * def Dijkstra_to_find_shortest_distances():             # <<<<<<<<<<<<<<
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
  * 
  */
@@ -1117,7 +1117,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_paths(CYTHON_U
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("gm.Dijkstra.Dijkstra_to_find_shortest_paths", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gm.Dijkstra.Dijkstra_to_find_shortest_distances", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1226,7 +1226,7 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
-  {&__pyx_n_s_Dijkstra_to_find_shortest_paths, __pyx_k_Dijkstra_to_find_shortest_paths, sizeof(__pyx_k_Dijkstra_to_find_shortest_paths), 0, 0, 1, 1},
+  {&__pyx_n_s_Dijkstra_to_find_shortest_distan, __pyx_k_Dijkstra_to_find_shortest_distan, sizeof(__pyx_k_Dijkstra_to_find_shortest_distan), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
@@ -1252,11 +1252,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "gm/Dijkstra.pyx":3
  * # Under construction
  * 
- * def Dijkstra_to_find_shortest_paths():             # <<<<<<<<<<<<<<
+ * def Dijkstra_to_find_shortest_distances():             # <<<<<<<<<<<<<<
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
  * 
  */
-  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_Dijkstra_to_find_shortest_paths, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_Dijkstra_to_find_shortest_distan, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 3, __pyx_L1_error)
 
   /* "gm/Dijkstra.pyx":6
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
@@ -1548,13 +1548,13 @@ if (!__Pyx_RefNanny) {
   /* "gm/Dijkstra.pyx":3
  * # Under construction
  * 
- * def Dijkstra_to_find_shortest_paths():             # <<<<<<<<<<<<<<
+ * def Dijkstra_to_find_shortest_distances():             # <<<<<<<<<<<<<<
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_8Dijkstra_1Dijkstra_to_find_shortest_paths, NULL, __pyx_n_s_gm_Dijkstra); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances, NULL, __pyx_n_s_gm_Dijkstra); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Dijkstra_to_find_shortest_paths, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Dijkstra_to_find_shortest_distan, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "gm/Dijkstra.pyx":6
@@ -1571,7 +1571,7 @@ if (!__Pyx_RefNanny) {
   /* "gm/Dijkstra.pyx":1
  * # Under construction             # <<<<<<<<<<<<<<
  * 
- * def Dijkstra_to_find_shortest_paths():
+ * def Dijkstra_to_find_shortest_distances():
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
