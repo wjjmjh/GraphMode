@@ -1070,13 +1070,14 @@ static PyObject *__pyx_codeobj__2;
  * # Under construction
  * 
  * def Dijkstra_to_find_shortest_distances():             # <<<<<<<<<<<<<<
- *     print("func Dijkstra_to_find_shortest_paths is under construction.")
- * 
+ *     """
+ *     Description:
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances = {"Dijkstra_to_find_shortest_distances", (PyCFunction)__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances, METH_NOARGS, 0};
+static char __pyx_doc_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances[] = "\n    Description:\n    A function that invokes the Heap object as the data structure to perform the\n    Dijkstra Algorithm to find the shortest distances from a specified source vertex to other\n    vertices on a given graph;\n\n    Input parameters:\n    graph: a Graph object that contains essential data and methods;\n    src_vertex: an integer ID of a specified source vertex that would be used to calculate\n    shortest paths from other vertices to this vertex.\342\200\242\n\n    Return:\n    A dictionary that has \"destination_vertex\" as its keys and \"shortest_distance_from_source\"\n    as its values.\n    ";
+static PyMethodDef __pyx_mdef_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances = {"Dijkstra_to_find_shortest_distances", (PyCFunction)__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances, METH_NOARGS, __pyx_doc_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances};
 static PyObject *__pyx_pw_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -1096,21 +1097,21 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("Dijkstra_to_find_shortest_distances", 0);
 
-  /* "gm/Dijkstra.pyx":4
- * 
- * def Dijkstra_to_find_shortest_distances():
+  /* "gm/Dijkstra.pyx":19
+ *     as its values.
+ *     """
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")             # <<<<<<<<<<<<<<
  * 
  * def influence_of_a_vertex():
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_func_Dijkstra_to_find_shortest_p) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_func_Dijkstra_to_find_shortest_p) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
 
   /* "gm/Dijkstra.pyx":3
  * # Under construction
  * 
  * def Dijkstra_to_find_shortest_distances():             # <<<<<<<<<<<<<<
- *     print("func Dijkstra_to_find_shortest_paths is under construction.")
- * 
+ *     """
+ *     Description:
  */
 
   /* function exit code */
@@ -1125,16 +1126,18 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
   return __pyx_r;
 }
 
-/* "gm/Dijkstra.pyx":6
+/* "gm/Dijkstra.pyx":21
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
  * 
  * def influence_of_a_vertex():             # <<<<<<<<<<<<<<
- *     print("func influence_of_a_vertex is under construction.")
+ *     """
+ *     Description:
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_2gm_8Dijkstra_3influence_of_a_vertex(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_2gm_8Dijkstra_3influence_of_a_vertex = {"influence_of_a_vertex", (PyCFunction)__pyx_pw_2gm_8Dijkstra_3influence_of_a_vertex, METH_NOARGS, 0};
+static char __pyx_doc_2gm_8Dijkstra_2influence_of_a_vertex[] = "\n    Description:\n    A function that invokes function dynamic_programming_to_find_the_shortest_distances to\n    compute the influence of a vertex to the graph by finding the average of the distances of shortest paths of the graph\n    before and after the removal of the vertex.\n\n    Input parameters:\n    graph: a Graph object that contains essential data and methods;\n    vertex: an Integer ID of a specified vertex as the interested;\n\n    Return: a number that represents the influence of the input vertex.\n    ";
+static PyMethodDef __pyx_mdef_2gm_8Dijkstra_3influence_of_a_vertex = {"influence_of_a_vertex", (PyCFunction)__pyx_pw_2gm_8Dijkstra_3influence_of_a_vertex, METH_NOARGS, __pyx_doc_2gm_8Dijkstra_2influence_of_a_vertex};
 static PyObject *__pyx_pw_2gm_8Dijkstra_3influence_of_a_vertex(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -1154,18 +1157,19 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("influence_of_a_vertex", 0);
 
-  /* "gm/Dijkstra.pyx":7
- * 
- * def influence_of_a_vertex():
+  /* "gm/Dijkstra.pyx":34
+ *     Return: a number that represents the influence of the input vertex.
+ *     """
  *     print("func influence_of_a_vertex is under construction.")             # <<<<<<<<<<<<<<
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_func_influence_of_a_vertex_is_un) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_func_influence_of_a_vertex_is_un) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
 
-  /* "gm/Dijkstra.pyx":6
+  /* "gm/Dijkstra.pyx":21
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
  * 
  * def influence_of_a_vertex():             # <<<<<<<<<<<<<<
- *     print("func influence_of_a_vertex is under construction.")
+ *     """
+ *     Description:
  */
 
   /* function exit code */
@@ -1253,18 +1257,19 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * # Under construction
  * 
  * def Dijkstra_to_find_shortest_distances():             # <<<<<<<<<<<<<<
- *     print("func Dijkstra_to_find_shortest_paths is under construction.")
- * 
+ *     """
+ *     Description:
  */
   __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_Dijkstra_to_find_shortest_distan, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 3, __pyx_L1_error)
 
-  /* "gm/Dijkstra.pyx":6
+  /* "gm/Dijkstra.pyx":21
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
  * 
  * def influence_of_a_vertex():             # <<<<<<<<<<<<<<
- *     print("func influence_of_a_vertex is under construction.")
+ *     """
+ *     Description:
  */
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_influence_of_a_vertex, 6, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_influence_of_a_vertex, 21, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1549,23 +1554,24 @@ if (!__Pyx_RefNanny) {
  * # Under construction
  * 
  * def Dijkstra_to_find_shortest_distances():             # <<<<<<<<<<<<<<
- *     print("func Dijkstra_to_find_shortest_paths is under construction.")
- * 
+ *     """
+ *     Description:
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_8Dijkstra_1Dijkstra_to_find_shortest_distances, NULL, __pyx_n_s_gm_Dijkstra); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Dijkstra_to_find_shortest_distan, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gm/Dijkstra.pyx":6
+  /* "gm/Dijkstra.pyx":21
  *     print("func Dijkstra_to_find_shortest_paths is under construction.")
  * 
  * def influence_of_a_vertex():             # <<<<<<<<<<<<<<
- *     print("func influence_of_a_vertex is under construction.")
+ *     """
+ *     Description:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_8Dijkstra_3influence_of_a_vertex, NULL, __pyx_n_s_gm_Dijkstra); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_8Dijkstra_3influence_of_a_vertex, NULL, __pyx_n_s_gm_Dijkstra); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_influence_of_a_vertex, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_influence_of_a_vertex, __pyx_t_1) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "gm/Dijkstra.pyx":1

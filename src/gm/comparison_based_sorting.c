@@ -1064,12 +1064,14 @@ static PyObject *__pyx_codeobj_;
  * # Under construction
  * 
  * def sort_vertices_based_on_comparison():             # <<<<<<<<<<<<<<
- *     print("func sort_vertices_based_on_comparison is under construction.")
+ *     """
+ *     Descriptions:
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison = {"sort_vertices_based_on_comparison", (PyCFunction)__pyx_pw_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison, METH_NOARGS, 0};
+static char __pyx_doc_2gm_24comparison_based_sorting_sort_vertices_based_on_comparison[] = "\n    Descriptions:\n    A function takes an array of vertices as input, and return its sorted version, based on\n    comparisons.\n\n    Input parameters:\n    vertices: an array of Vertex objects to be sorted;\n    order: a string that specifies the comparison-based sorting is ascending or descending;\n\n    Return:\n    A sorted array of vertices.\n    ";
+static PyMethodDef __pyx_mdef_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison = {"sort_vertices_based_on_comparison", (PyCFunction)__pyx_pw_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison, METH_NOARGS, __pyx_doc_2gm_24comparison_based_sorting_sort_vertices_based_on_comparison};
 static PyObject *__pyx_pw_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -1089,18 +1091,19 @@ static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_vertices_based_on_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("sort_vertices_based_on_comparison", 0);
 
-  /* "gm/comparison_based_sorting.pyx":4
- * 
- * def sort_vertices_based_on_comparison():
+  /* "gm/comparison_based_sorting.pyx":16
+ *     A sorted array of vertices.
+ *     """
  *     print("func sort_vertices_based_on_comparison is under construction.")             # <<<<<<<<<<<<<<
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_func_sort_vertices_based_on_comp) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_func_sort_vertices_based_on_comp) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
 
   /* "gm/comparison_based_sorting.pyx":3
  * # Under construction
  * 
  * def sort_vertices_based_on_comparison():             # <<<<<<<<<<<<<<
- *     print("func sort_vertices_based_on_comparison is under construction.")
+ *     """
+ *     Descriptions:
  */
 
   /* function exit code */
@@ -1186,7 +1189,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * # Under construction
  * 
  * def sort_vertices_based_on_comparison():             # <<<<<<<<<<<<<<
- *     print("func sort_vertices_based_on_comparison is under construction.")
+ *     """
+ *     Descriptions:
  */
   __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_comparison_based_sorting, __pyx_n_s_sort_vertices_based_on_compariso, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
@@ -1473,7 +1477,8 @@ if (!__Pyx_RefNanny) {
  * # Under construction
  * 
  * def sort_vertices_based_on_comparison():             # <<<<<<<<<<<<<<
- *     print("func sort_vertices_based_on_comparison is under construction.")
+ *     """
+ *     Descriptions:
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison, NULL, __pyx_n_s_gm_comparison_based_sorting); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);

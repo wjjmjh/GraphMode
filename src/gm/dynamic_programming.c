@@ -1064,12 +1064,14 @@ static PyObject *__pyx_codeobj_;
  * # Under construction
  * 
  * def dynamic_programming_to_find_the_shortest_path():             # <<<<<<<<<<<<<<
- *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
+ *     """
+ *     Description:
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path = {"dynamic_programming_to_find_the_shortest_path", (PyCFunction)__pyx_pw_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path, METH_NOARGS, 0};
+static char __pyx_doc_2gm_19dynamic_programming_dynamic_programming_to_find_the_shortest_path[] = "\n    Description:\n    A function that takes a generated distance matrix from a Graph object, and applies the\n    Floyd-Warshall Algorithm and dynamic programming to find the shortest path.\n\n    Input parameters:\n    dist_matrix: A dictionary that represents a distance matrix;\n    src_vertex: an Integer ID of a specified vertex as the source;\n    dest_vertex: an Integer ID of a specified vertex as the destination;\n\n    Return:\n    an array of vertices that represents the shortest path between the source vertex and the\n    destination vertex.\n    ";
+static PyMethodDef __pyx_mdef_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path = {"dynamic_programming_to_find_the_shortest_path", (PyCFunction)__pyx_pw_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path, METH_NOARGS, __pyx_doc_2gm_19dynamic_programming_dynamic_programming_to_find_the_shortest_path};
 static PyObject *__pyx_pw_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -1089,18 +1091,19 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("dynamic_programming_to_find_the_shortest_path", 0);
 
-  /* "gm/dynamic_programming.pyx":4
- * 
- * def dynamic_programming_to_find_the_shortest_path():
+  /* "gm/dynamic_programming.pyx":18
+ *     destination vertex.
+ *     """
  *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")             # <<<<<<<<<<<<<<
  */
-  if (__Pyx_PrintOne(0, __pyx_kp_s_func_dynamic_programming_to_find) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_kp_s_func_dynamic_programming_to_find) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
 
   /* "gm/dynamic_programming.pyx":3
  * # Under construction
  * 
  * def dynamic_programming_to_find_the_shortest_path():             # <<<<<<<<<<<<<<
- *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
+ *     """
+ *     Description:
  */
 
   /* function exit code */
@@ -1186,7 +1189,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * # Under construction
  * 
  * def dynamic_programming_to_find_the_shortest_path():             # <<<<<<<<<<<<<<
- *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
+ *     """
+ *     Description:
  */
   __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_dynamic_programming_pyx, __pyx_n_s_dynamic_programming_to_find_the, 3, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
@@ -1473,7 +1477,8 @@ if (!__Pyx_RefNanny) {
  * # Under construction
  * 
  * def dynamic_programming_to_find_the_shortest_path():             # <<<<<<<<<<<<<<
- *     print("func dynamic_programming_to_find_the_shortest_path is under construction.")
+ *     """
+ *     Description:
  */
   __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path, NULL, __pyx_n_s_gm_dynamic_programming); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
