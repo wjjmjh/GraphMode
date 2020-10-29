@@ -1,7 +1,8 @@
-# Under construction
+import sys
 
+include "../include/numerical_pyrex.pyx"
 
-def Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph):
+def Dijkstra_to_find_shortest_distances(int src_vertex, Int1D vertices, Int2D graph):
     """
     Description:
     A function that invokes the Heap object as the data structure to perform the
@@ -17,22 +18,25 @@ def Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph):
     A dictionary that has "destination_vertex" as its keys and "shortest_distance_from_source"
     as its values.
     """
-    shortest_distances = [float("inf") for v in vertices]
-    shortest_path_tree = [False for v in vertices]
+    cdef int minimum_distance, minimum_distance_index, d1, d2, d
+    cdef Int1D shortest_distances, shortest_path_tree
+
+    shortest_distances = [sys.maxsize for v in vertices]
+    shortest_path_tree = [0 for v in vertices]
     shortest_distances[src_vertex] = 0
 
     for _ in vertices:
-        minimum_distance = float("inf")
+        minimum_distance = sys.maxsize
         for v in vertices:
-            if shortest_distances[v] < minimum_distance and not shortest_path_tree[v]:
+            if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:
                 minimum_distance = shortest_distances[v]
         minimum_distance_index = shortest_distances.index(minimum_distance)
-        shortest_path_tree[minimum_distance_index] = True
+        shortest_path_tree[minimum_distance_index] = 1
         for v in vertices:
             d1 = graph[minimum_distance_index][v]
             d2 = shortest_distances[minimum_distance_index]
             d = d1 + d2
-            if d1 > 0 and shortest_distances[v] > d and not shortest_path_tree[v]:
+            if d1 > 0 and shortest_distances[v] > d and shortest_path_tree[v] == 0:
                 shortest_distances[v] = d
     return shortest_distances
 
