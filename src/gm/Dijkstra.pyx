@@ -21,7 +21,7 @@ def Dijkstra_to_find_shortest_distances():
 def influence_of_a_vertex():
     """
     Description:
-    A function that invokes function dynamic_programming_to_find_the_shortest_distances to
+    A function that invokes function Dijkstra_to_find_shortest_distances to
     compute the influence of a vertex to the graph by finding the average of the distances of shortest paths of the graph
     before and after the removal of the vertex.
 
