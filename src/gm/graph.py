@@ -2,6 +2,7 @@ class vertex:
     """
     An object having an ID and a weight to define a vertex in a graph.
     """
+
     def __init__(self, index, name):
         self.index = index
         self.name = name
@@ -11,6 +12,7 @@ class Edge:
     """
     An object having two vertices as the ends and a weight to define an edge in a graph.
     """
+
     def __init__(self, vertices, cost):
         """
         :param vertices: a tuple that has two vertices connected by this edge. e.g. (vertex A, vertex B)
@@ -29,6 +31,7 @@ class Graph:
     func compute_distance_matrix: returns a distance matrix based on existing vertices and edges on the
     graph.
     """
+
     def __init__(self):
         self._vertices = []
         self._edges = []
@@ -51,4 +54,3 @@ class Graph:
 
     def compute_distance_matrix(self):
         raise NotImplementedError
-

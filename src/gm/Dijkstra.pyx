@@ -1,6 +1,7 @@
 # Under construction
 
-def Dijkstra_to_find_shortest_distances():
+
+def Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph):
     """
     Description:
     A function that invokes the Heap object as the data structure to perform the
@@ -16,7 +17,25 @@ def Dijkstra_to_find_shortest_distances():
     A dictionary that has "destination_vertex" as its keys and "shortest_distance_from_source"
     as its values.
     """
-    print("func Dijkstra_to_find_shortest_paths is under construction.")
+    shortest_distances = [float("inf") for v in vertices]
+    shortest_path_tree = [False for v in vertices]
+    shortest_distances[src_vertex] = 0
+
+    for _ in vertices:
+        minimum_distance = float("-inf")
+        for v in vertices:
+            if shortest_distances[v] < minimum_distance and not shortest_path_tree[v2]:
+                minimum_distance = shortest_distances[v]
+        minimum_distance_index = shortest_distances.index(minimum_distance)
+        shortest_path_tree[minimum_distance_index] = True
+        for v in vertices:
+            d1 = graph[minimum_distance_index][v]
+            d2 = shortest_distances[minimum_distance_index]
+            d = d1 + d2
+            if d1 > 0 and shortest_distances[v] > d and not shortest_path_tree[v]:
+                shortest_distances[v] = d
+    return shortest_distances
+
 
 def influence_of_a_vertex():
     """
