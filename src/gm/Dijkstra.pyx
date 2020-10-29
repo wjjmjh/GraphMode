@@ -24,7 +24,7 @@ def Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph):
     for _ in vertices:
         minimum_distance = float("-inf")
         for v in vertices:
-            if shortest_distances[v] < minimum_distance and not shortest_path_tree[v2]:
+            if shortest_distances[v] < minimum_distance and not shortest_path_tree[v]:
                 minimum_distance = shortest_distances[v]
         minimum_distance_index = shortest_distances.index(minimum_distance)
         shortest_path_tree[minimum_distance_index] = True
