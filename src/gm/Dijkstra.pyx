@@ -41,7 +41,7 @@ def Dijkstra_to_find_shortest_distances(int src_vertex, Int1D vertices, Int2D gr
     return shortest_distances
 
 
-def influence_of_a_vertex():
+def influence_of_a_vertex(Int2D before_removal, Int2D after_removal):
     """
     Description:
     A function that invokes function Dijkstra_to_find_shortest_distances to
@@ -54,4 +54,20 @@ def influence_of_a_vertex():
 
     Return: a number that represents the influence of the input vertex.
     """
-    print("func influence_of_a_vertex is under construction.")
+    cdef float val_before_removal, val_after_removal
+
+    val_before_removal = 0.0
+    val_after_removal = 0.0
+
+    for v in before_removal:
+        for dist in v:
+            val_before_removal += dist
+    val_before_removal /= len(before_removal)
+
+    for v in after_removal:
+        for dist in v:
+            val_after_removal += dist
+    val_after_removal /= len(after_removal)
+
+    return val_before_removal - val_after_removal
+
