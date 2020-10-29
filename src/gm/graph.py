@@ -2,8 +2,8 @@ class vertex:
     """
     An object having an ID and a weight to define a vertex in a graph.
     """
-    def __init__(self, id, name):
-        self.id = id
+    def __init__(self, index, name):
+        self.index = index
         self.name = name
 
 
