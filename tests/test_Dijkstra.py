@@ -2,7 +2,8 @@ import sys
 
 import numpy
 
-from gm.main import Dijkstra_to_find_shortest_distances
+from gm.main import (Dijkstra_to_find_shortest_distances,
+                     compute_influence_of_a_vertex)
 from gm.utils.tester import TestCase
 
 
@@ -23,4 +24,9 @@ class DijkstraAlgorithmsTests(TestCase):
                 [0, 0, 2, 0, 0, 0, 6, 7, 0],
             ]
         ).astype(numpy.int64)
-        got = Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph)
+        Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph)
+
+    def test_influence_of_a_vertex(self):
+        before_removal = numpy.array([[1, 2], [3, 4]]).astype(numpy.int64)
+        after_removal = numpy.array([[5, 6], [7, 8]]).astype(numpy.int64)
+        compute_influence_of_a_vertex(before_removal, after_removal)
