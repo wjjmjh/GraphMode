@@ -10,16 +10,16 @@ def sort_vertices_based_on_comparison():
     comparison_based_sorting.sort_vertices_based_on_comparison()
 
 
-def Dijkstra_to_find_shortest_paths():
-    Dijkstra.Dijkstra_to_find_shortest_paths()
+def Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph):
+    return Dijkstra.Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph)
 
 
 def dynamic_programming_to_find_the_shortest_path():
     dynamic_programming.dynamic_programming_to_find_the_shortest_path()
 
 
-def compute_influence_of_a_vertex():
-    dynamic_programming.influence_of_a_vertex()
+def compute_influence_of_a_vertex(before_removal, after_removal):
+    Dijkstra.influence_of_a_vertex(before_removal, after_removal)
 
 
 _funcs = [

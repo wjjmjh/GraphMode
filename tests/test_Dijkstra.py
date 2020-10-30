@@ -2,7 +2,7 @@ import sys
 
 import numpy
 
-from gm.main import Dijkstra_to_find_shortest_paths
+from gm.main import Dijkstra_to_find_shortest_distances
 from gm.utils.tester import TestCase
 
 
@@ -23,4 +23,4 @@ class DijkstraAlgorithmsTests(TestCase):
                 [0, 0, 2, 0, 0, 0, 6, 7, 0],
             ]
         ).astype(numpy.int64)
-        got = Dijkstra_to_find_shortest_paths(src_vertex, vertices, graph)
+        got = Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph)
