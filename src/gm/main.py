@@ -19,7 +19,7 @@ def dynamic_programming_to_find_the_shortest_path():
 
 
 def compute_influence_of_a_vertex(before_removal, after_removal):
-    Dijkstra.influence_of_a_vertex(before_removal, after_removal)
+    return Dijkstra.influence_of_a_vertex(before_removal, after_removal)
 
 
 _funcs = [

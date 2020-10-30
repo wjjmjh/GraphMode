@@ -1,4 +1,5 @@
 import sys
+
 import numpy
 
 include "../include/numerical_pyrex.pyx"
@@ -48,7 +49,7 @@ def Dijkstra_to_find_shortest_distances(int src_vertex, Long1D vertices, Long2D 
     return shortest_distances
 
 
-def influence_of_a_vertex(Int2D before_removal, Int2D after_removal):
+def influence_of_a_vertex(Long2D before_removal, Long2D after_removal):
     """
     Description:
     A function that invokes function Dijkstra_to_find_shortest_distances to
