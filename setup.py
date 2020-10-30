@@ -44,7 +44,7 @@ setup(
     description="An app that defines graphs.",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    install_requires=["Cython"],
+    install_requires=["Cython", "numpy"],
     extras_require={"dev": []},
     ext_modules=cythonize(
         [
@@ -52,6 +52,7 @@ setup(
             CythonExtension("gm.comparison_based_sorting"),
             CythonExtension("gm.Dijkstra"),
             CythonExtension("gm.dynamic_programming"),
+            CythonExtension("gm.type_error_fix"),
         ]
     ),
 )
