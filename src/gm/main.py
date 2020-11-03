@@ -14,8 +14,12 @@ def Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph):
     return Dijkstra.Dijkstra_to_find_shortest_distances(src_vertex, vertices, graph)
 
 
-def dynamic_programming_to_find_the_shortest_path():
-    dynamic_programming.dynamic_programming_to_find_the_shortest_path()
+def dynamic_programming_to_find_the_shortest_path(
+    from_vertex, to_vertex, path, n, dist, foot_print
+):
+    return dynamic_programming.dynamic_programming_to_find_the_shortest_path(
+        from_vertex, to_vertex, path, n, dist, foot_print
+    )
 
 
 def compute_influence_of_a_vertex(before_removal, after_removal):
