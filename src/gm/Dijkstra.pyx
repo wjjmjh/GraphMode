@@ -78,4 +78,3 @@ def influence_of_a_vertex(Long2D before_removal, Long2D after_removal):
     val_after_removal /= len(after_removal)
 
     return val_before_removal - val_after_removal
-
