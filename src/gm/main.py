@@ -26,12 +26,17 @@ def compute_influence_of_a_vertex(before_removal, after_removal):
     return Dijkstra.influence_of_a_vertex(before_removal, after_removal)
 
 
+def sort_vertices_based_on_comparison(vertices):
+    comparison_based_sorting.sort_vertices_based_on_comparison(vertices)
+
+
 _funcs = [
     "hello_world",
     "sort_vertices_based_on_comparison",
     "Dijkstra_to_find_shortest_distances",
     "dynamic_programming_to_find_the_shortest_path",
     "compute_influence_of_a_vertex",
+    "sort_vertices_based_on_comparison",
 ]
 
 
