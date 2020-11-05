@@ -9,3 +9,4 @@ dependencies:
     - --editable .
     - Cython
     - numpy
+    - pytest
