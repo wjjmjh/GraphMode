@@ -29,7 +29,9 @@ class Edge:
 
     def to_str(self):
         return "{v1} {v2} {cost}".format(
-            v1=self.vertices[0], v2=self.vertices[1], cost=self.cost
+            v1=self.vertices[0].to_str().split(" ")[0],
+            v2=self.vertices[1].to_str().split(" ")[0],
+            cost=self.cost,
         )
 
 
@@ -63,7 +65,7 @@ class Graph:
     def edges(self, new_edges):
         self._edges = new_edges
 
-    def append_vertice(self, v):
+    def append_vertex(self, v):
         self._vertices.append(v)
 
     def append_edge(self, e):
@@ -73,7 +75,7 @@ class Graph:
         raise NotImplementedError
 
     def to_txt(self):
-        vertices = [v.to_str for v in self._vertices]
-        edges = [e.to_str for e in self._edges]
+        vertices = [v.to_str() for v in self._vertices]
+        edges = [e.to_str() for e in self._edges]
         write_txt(vertices, "vertices")
         write_txt(edges, "edges")
