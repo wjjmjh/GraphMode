@@ -3,9 +3,10 @@ class vertex:
     An object having an ID and a weight to define a vertex in a graph.
     """
 
-    def __init__(self, index, name):
+    def __init__(self, index, name, impact):
         self.index = index
         self.name = name
+        self.impact = impact
 
 
 class Edge:
