@@ -25,6 +25,12 @@ def _a_fname(fn, suffix):
 
 
 def write_txt(lines, filename):
-    with open(_a_fname(filename, "txt"), "w", encoding="utf-8") as txtfile:
+    with open(_a_fname(filename, "txt"), "w", encoding="utf-8") as txt_file:
         for line in lines:
-            txtfile.write(line + os.linesep)
+            txt_file.write(line + os.linesep)
+
+
+def read_txt(filename):
+    with open(filename, "r", encoding="utf-8") as txt_file:
+        lines = txt_file.readlines()
+        return [line.replace("\n", "") for line in lines]
