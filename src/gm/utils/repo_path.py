@@ -46,7 +46,7 @@ class repoPathManager:
 
     @property
     @_wrapping_refreshing
-    def gm(self):
+    def output(self):
         self.find_src()
         self._combine_one("output")
         return self.base
