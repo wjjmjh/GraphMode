@@ -61,10 +61,3 @@ class GraphConstructor:
                     )
                 )
         return topological_graph
-
-
-if __name__ == "__main__":
-    import random
-
-    while True:
-        print(random.randint(2, 10))
