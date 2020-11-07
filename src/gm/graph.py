@@ -1,12 +1,17 @@
-class vertex:
+from gm.utils.io_ import write_txt
+
+
+class Vertex:
     """
     An object having an ID and a weight to define a vertex in a graph.
     """
 
-    def __init__(self, index, name, impact):
+    def __init__(self, index, impact):
         self.index = index
-        self.name = name
         self.impact = impact
+
+    def to_str(self):
+        return "{index} {impact}".format(index=self.index, impact=self.impact)
 
 
 class Edge:
@@ -21,6 +26,11 @@ class Edge:
         """
         self.vertices = vertices
         self.cost = cost
+
+    def to_str(self):
+        return "{v1} {v2} {cost}".format(
+            v1=self.vertices[0], v2=self.vertices[1], cost=self.cost
+        )
 
 
 class Graph:
@@ -53,5 +63,17 @@ class Graph:
     def edges(self, new_edges):
         self._edges = new_edges
 
+    def append_vertice(self, v):
+        self._vertices.append(v)
+
+    def append_edge(self, e):
+        self._edges.append(e)
+
     def compute_distance_matrix(self):
         raise NotImplementedError
+
+    def to_txt(self):
+        vertices = [v.to_str for v in self._vertices]
+        edges = [e.to_str for e in self._edges]
+        write_txt(vertices, "vertices")
+        write_txt(edges, "edges")
