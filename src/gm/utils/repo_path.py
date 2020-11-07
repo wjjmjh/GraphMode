@@ -43,3 +43,10 @@ class repoPathManager:
         self.find_src()
         self._combine_one("gm")
         return self.base
+
+    @property
+    @_wrapping_refreshing
+    def gm(self):
+        self.find_src()
+        self._combine_one("output")
+        return self.base
