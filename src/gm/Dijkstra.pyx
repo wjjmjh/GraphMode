@@ -31,14 +31,10 @@ def Dijkstra_to_find_shortest_distances(int src_vertex, Long1D vertices, Long2D 
 
     for _ in vertices:
         minimum_distance = sys.maxsize
-        for v in vertices:
+        for i, v in enumerate(vertices):
             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:
                 minimum_distance = shortest_distances[v]
-        minimum_distance_index = -1
-        for i, dist in enumerate(shortest_distances):
-            if dist == minimum_distance:
                 minimum_distance_index = i
-                break
         shortest_path_tree[minimum_distance_index] = 1
         for v in vertices:
             d1 = graph[minimum_distance_index][v]

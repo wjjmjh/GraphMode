@@ -2236,9 +2236,8 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
   __pyx_t_2gm_8Dijkstra_Long1D __pyx_v_shortest_distances = { 0, 0, { 0 }, { 0 }, { 0 } };
   __pyx_t_2gm_8Dijkstra_Long1D __pyx_v_shortest_path_tree = { 0, 0, { 0 }, { 0 }, { 0 } };
   CYTHON_UNUSED PyObject *__pyx_v__ = NULL;
-  PyObject *__pyx_v_v = NULL;
   PyObject *__pyx_v_i = NULL;
-  PyObject *__pyx_v_dist = NULL;
+  PyObject *__pyx_v_v = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2509,7 +2508,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
  * 
  *     for _ in vertices:             # <<<<<<<<<<<<<<
  *         minimum_distance = sys.maxsize
- *         for v in vertices:
+ *         for i, v in enumerate(vertices):
  */
   __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_vertices, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -2560,7 +2559,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
  * 
  *     for _ in vertices:
  *         minimum_distance = sys.maxsize             # <<<<<<<<<<<<<<
- *         for v in vertices:
+ *         for i, v in enumerate(vertices):
  *             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:
  */
     __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sys); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
@@ -2575,43 +2574,45 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
     /* "gm/Dijkstra.pyx":34
  *     for _ in vertices:
  *         minimum_distance = sys.maxsize
- *         for v in vertices:             # <<<<<<<<<<<<<<
+ *         for i, v in enumerate(vertices):             # <<<<<<<<<<<<<<
  *             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:
  *                 minimum_distance = shortest_distances[v]
  */
-    __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_vertices, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
-      __pyx_t_1 = __pyx_t_3; __Pyx_INCREF(__pyx_t_1); __pyx_t_14 = 0;
+    __Pyx_INCREF(__pyx_int_0);
+    __pyx_t_3 = __pyx_int_0;
+    __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_vertices, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
+      __pyx_t_4 = __pyx_t_1; __Pyx_INCREF(__pyx_t_4); __pyx_t_14 = 0;
       __pyx_t_15 = NULL;
     } else {
-      __pyx_t_14 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_15 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_14 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_15 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 34, __pyx_L1_error)
     }
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     for (;;) {
       if (likely(!__pyx_t_15)) {
-        if (likely(PyList_CheckExact(__pyx_t_1))) {
-          if (__pyx_t_14 >= PyList_GET_SIZE(__pyx_t_1)) break;
+        if (likely(PyList_CheckExact(__pyx_t_4))) {
+          if (__pyx_t_14 >= PyList_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
+          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_1); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
           #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_3);
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_1);
           #endif
         } else {
-          if (__pyx_t_14 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
+          if (__pyx_t_14 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
+          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_1); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
           #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_3);
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_1);
           #endif
         }
       } else {
-        __pyx_t_3 = __pyx_t_15(__pyx_t_1);
-        if (unlikely(!__pyx_t_3)) {
+        __pyx_t_1 = __pyx_t_15(__pyx_t_4);
+        if (unlikely(!__pyx_t_1)) {
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
@@ -2619,17 +2620,24 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
           }
           break;
         }
-        __Pyx_GOTREF(__pyx_t_3);
+        __Pyx_GOTREF(__pyx_t_1);
       }
-      __Pyx_XDECREF_SET(__pyx_v_v, __pyx_t_3);
-      __pyx_t_3 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_v, __pyx_t_1);
+      __pyx_t_1 = 0;
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
+      __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_3);
+      __pyx_t_3 = __pyx_t_1;
+      __pyx_t_1 = 0;
 
       /* "gm/Dijkstra.pyx":35
  *         minimum_distance = sys.maxsize
- *         for v in vertices:
+ *         for i, v in enumerate(vertices):
  *             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:             # <<<<<<<<<<<<<<
  *                 minimum_distance = shortest_distances[v]
- *         minimum_distance_index = -1
+ *                 minimum_distance_index = i
  */
       __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 35, __pyx_L1_error)
       __pyx_t_11 = __pyx_t_17;
@@ -2665,11 +2673,11 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
       if (__pyx_t_16) {
 
         /* "gm/Dijkstra.pyx":36
- *         for v in vertices:
+ *         for i, v in enumerate(vertices):
  *             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:
  *                 minimum_distance = shortest_distances[v]             # <<<<<<<<<<<<<<
- *         minimum_distance_index = -1
- *         for i, dist in enumerate(shortest_distances):
+ *                 minimum_distance_index = i
+ *         shortest_path_tree[minimum_distance_index] = 1
  */
         __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L1_error)
         __pyx_t_11 = __pyx_t_17;
@@ -2684,153 +2692,39 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
         }
         __pyx_v_minimum_distance = (*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_shortest_distances.data) + __pyx_t_11)) )));
 
+        /* "gm/Dijkstra.pyx":37
+ *             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:
+ *                 minimum_distance = shortest_distances[v]
+ *                 minimum_distance_index = i             # <<<<<<<<<<<<<<
+ *         shortest_path_tree[minimum_distance_index] = 1
+ *         for v in vertices:
+ */
+        __pyx_t_12 = __Pyx_PyInt_As_int(__pyx_v_i); if (unlikely((__pyx_t_12 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L1_error)
+        __pyx_v_minimum_distance_index = __pyx_t_12;
+
         /* "gm/Dijkstra.pyx":35
  *         minimum_distance = sys.maxsize
- *         for v in vertices:
+ *         for i, v in enumerate(vertices):
  *             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:             # <<<<<<<<<<<<<<
  *                 minimum_distance = shortest_distances[v]
- *         minimum_distance_index = -1
+ *                 minimum_distance_index = i
  */
       }
 
       /* "gm/Dijkstra.pyx":34
  *     for _ in vertices:
  *         minimum_distance = sys.maxsize
- *         for v in vertices:             # <<<<<<<<<<<<<<
+ *         for i, v in enumerate(vertices):             # <<<<<<<<<<<<<<
  *             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:
  *                 minimum_distance = shortest_distances[v]
  */
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-    /* "gm/Dijkstra.pyx":37
- *             if shortest_distances[v] < minimum_distance and shortest_path_tree[v] == 0:
- *                 minimum_distance = shortest_distances[v]
- *         minimum_distance_index = -1             # <<<<<<<<<<<<<<
- *         for i, dist in enumerate(shortest_distances):
- *             if dist == minimum_distance:
- */
-    __pyx_v_minimum_distance_index = -1;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
     /* "gm/Dijkstra.pyx":38
  *                 minimum_distance = shortest_distances[v]
- *         minimum_distance_index = -1
- *         for i, dist in enumerate(shortest_distances):             # <<<<<<<<<<<<<<
- *             if dist == minimum_distance:
  *                 minimum_distance_index = i
- */
-    __Pyx_INCREF(__pyx_int_0);
-    __pyx_t_1 = __pyx_int_0;
-    __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_shortest_distances, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
-      __pyx_t_4 = __pyx_t_3; __Pyx_INCREF(__pyx_t_4); __pyx_t_14 = 0;
-      __pyx_t_15 = NULL;
-    } else {
-      __pyx_t_14 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_15 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 38, __pyx_L1_error)
-    }
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    for (;;) {
-      if (likely(!__pyx_t_15)) {
-        if (likely(PyList_CheckExact(__pyx_t_4))) {
-          if (__pyx_t_14 >= PyList_GET_SIZE(__pyx_t_4)) break;
-          #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 38, __pyx_L1_error)
-          #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_3);
-          #endif
-        } else {
-          if (__pyx_t_14 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
-          #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 38, __pyx_L1_error)
-          #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_3);
-          #endif
-        }
-      } else {
-        __pyx_t_3 = __pyx_t_15(__pyx_t_4);
-        if (unlikely(!__pyx_t_3)) {
-          PyObject* exc_type = PyErr_Occurred();
-          if (exc_type) {
-            if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 38, __pyx_L1_error)
-          }
-          break;
-        }
-        __Pyx_GOTREF(__pyx_t_3);
-      }
-      __Pyx_XDECREF_SET(__pyx_v_dist, __pyx_t_3);
-      __pyx_t_3 = 0;
-      __Pyx_INCREF(__pyx_t_1);
-      __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_1);
-      __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_t_1, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_1);
-      __pyx_t_1 = __pyx_t_3;
-      __pyx_t_3 = 0;
-
-      /* "gm/Dijkstra.pyx":39
- *         minimum_distance_index = -1
- *         for i, dist in enumerate(shortest_distances):
- *             if dist == minimum_distance:             # <<<<<<<<<<<<<<
- *                 minimum_distance_index = i
- *                 break
- */
-      __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_v_minimum_distance); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 39, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_9 = PyObject_RichCompare(__pyx_v_dist, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 39, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_16 < 0)) __PYX_ERR(0, 39, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      if (__pyx_t_16) {
-
-        /* "gm/Dijkstra.pyx":40
- *         for i, dist in enumerate(shortest_distances):
- *             if dist == minimum_distance:
- *                 minimum_distance_index = i             # <<<<<<<<<<<<<<
- *                 break
- *         shortest_path_tree[minimum_distance_index] = 1
- */
-        __pyx_t_12 = __Pyx_PyInt_As_int(__pyx_v_i); if (unlikely((__pyx_t_12 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 40, __pyx_L1_error)
-        __pyx_v_minimum_distance_index = __pyx_t_12;
-
-        /* "gm/Dijkstra.pyx":41
- *             if dist == minimum_distance:
- *                 minimum_distance_index = i
- *                 break             # <<<<<<<<<<<<<<
- *         shortest_path_tree[minimum_distance_index] = 1
- *         for v in vertices:
- */
-        goto __pyx_L15_break;
-
-        /* "gm/Dijkstra.pyx":39
- *         minimum_distance_index = -1
- *         for i, dist in enumerate(shortest_distances):
- *             if dist == minimum_distance:             # <<<<<<<<<<<<<<
- *                 minimum_distance_index = i
- *                 break
- */
-      }
-
-      /* "gm/Dijkstra.pyx":38
- *                 minimum_distance = shortest_distances[v]
- *         minimum_distance_index = -1
- *         for i, dist in enumerate(shortest_distances):             # <<<<<<<<<<<<<<
- *             if dist == minimum_distance:
- *                 minimum_distance_index = i
- */
-    }
-    __pyx_L15_break:;
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-    /* "gm/Dijkstra.pyx":42
- *                 minimum_distance_index = i
- *                 break
  *         shortest_path_tree[minimum_distance_index] = 1             # <<<<<<<<<<<<<<
  *         for v in vertices:
  *             d1 = graph[minimum_distance_index][v]
@@ -2843,70 +2737,70 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
     } else if (unlikely(__pyx_t_11 >= __pyx_v_shortest_path_tree.shape[0])) __pyx_t_12 = 0;
     if (unlikely(__pyx_t_12 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_12);
-      __PYX_ERR(0, 42, __pyx_L1_error)
+      __PYX_ERR(0, 38, __pyx_L1_error)
     }
     *((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_shortest_path_tree.data) + __pyx_t_11)) )) = 1;
 
-    /* "gm/Dijkstra.pyx":43
- *                 break
+    /* "gm/Dijkstra.pyx":39
+ *                 minimum_distance_index = i
  *         shortest_path_tree[minimum_distance_index] = 1
  *         for v in vertices:             # <<<<<<<<<<<<<<
  *             d1 = graph[minimum_distance_index][v]
  *             d2 = shortest_distances[minimum_distance_index]
  */
-    __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_vertices, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
-      __pyx_t_4 = __pyx_t_1; __Pyx_INCREF(__pyx_t_4); __pyx_t_14 = 0;
+    __pyx_t_3 = __pyx_memoryview_fromslice(__pyx_v_vertices, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 39, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
+      __pyx_t_4 = __pyx_t_3; __Pyx_INCREF(__pyx_t_4); __pyx_t_14 = 0;
       __pyx_t_15 = NULL;
     } else {
-      __pyx_t_14 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 43, __pyx_L1_error)
+      __pyx_t_14 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 39, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_15 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 43, __pyx_L1_error)
+      __pyx_t_15 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 39, __pyx_L1_error)
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     for (;;) {
       if (likely(!__pyx_t_15)) {
         if (likely(PyList_CheckExact(__pyx_t_4))) {
           if (__pyx_t_14 >= PyList_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_1); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L1_error)
+          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 39, __pyx_L1_error)
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_1);
+          __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 39, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_3);
           #endif
         } else {
           if (__pyx_t_14 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_1); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L1_error)
+          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_14); __Pyx_INCREF(__pyx_t_3); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 39, __pyx_L1_error)
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_1);
+          __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 39, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_3);
           #endif
         }
       } else {
-        __pyx_t_1 = __pyx_t_15(__pyx_t_4);
-        if (unlikely(!__pyx_t_1)) {
+        __pyx_t_3 = __pyx_t_15(__pyx_t_4);
+        if (unlikely(!__pyx_t_3)) {
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 43, __pyx_L1_error)
+            else __PYX_ERR(0, 39, __pyx_L1_error)
           }
           break;
         }
-        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_GOTREF(__pyx_t_3);
       }
-      __Pyx_XDECREF_SET(__pyx_v_v, __pyx_t_1);
-      __pyx_t_1 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_v, __pyx_t_3);
+      __pyx_t_3 = 0;
 
-      /* "gm/Dijkstra.pyx":44
+      /* "gm/Dijkstra.pyx":40
  *         shortest_path_tree[minimum_distance_index] = 1
  *         for v in vertices:
  *             d1 = graph[minimum_distance_index][v]             # <<<<<<<<<<<<<<
  *             d2 = shortest_distances[minimum_distance_index]
  *             d = d1 + d2
  */
-      __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 40, __pyx_L1_error)
       __pyx_t_11 = __pyx_v_minimum_distance_index;
       __pyx_t_19 = __pyx_t_17;
       __pyx_t_12 = -1;
@@ -2920,11 +2814,11 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
       } else if (unlikely(__pyx_t_19 >= __pyx_v_graph.shape[1])) __pyx_t_12 = 1;
       if (unlikely(__pyx_t_12 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_12);
-        __PYX_ERR(0, 44, __pyx_L1_error)
+        __PYX_ERR(0, 40, __pyx_L1_error)
       }
       __pyx_v_d1 = (*((long *) ( /* dim=1 */ ((char *) (((long *) ( /* dim=0 */ (__pyx_v_graph.data + __pyx_t_11 * __pyx_v_graph.strides[0]) )) + __pyx_t_19)) )));
 
-      /* "gm/Dijkstra.pyx":45
+      /* "gm/Dijkstra.pyx":41
  *         for v in vertices:
  *             d1 = graph[minimum_distance_index][v]
  *             d2 = shortest_distances[minimum_distance_index]             # <<<<<<<<<<<<<<
@@ -2939,11 +2833,11 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
       } else if (unlikely(__pyx_t_19 >= __pyx_v_shortest_distances.shape[0])) __pyx_t_12 = 0;
       if (unlikely(__pyx_t_12 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_12);
-        __PYX_ERR(0, 45, __pyx_L1_error)
+        __PYX_ERR(0, 41, __pyx_L1_error)
       }
       __pyx_v_d2 = (*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_shortest_distances.data) + __pyx_t_19)) )));
 
-      /* "gm/Dijkstra.pyx":46
+      /* "gm/Dijkstra.pyx":42
  *             d1 = graph[minimum_distance_index][v]
  *             d2 = shortest_distances[minimum_distance_index]
  *             d = d1 + d2             # <<<<<<<<<<<<<<
@@ -2952,7 +2846,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
  */
       __pyx_v_d = (__pyx_v_d1 + __pyx_v_d2);
 
-      /* "gm/Dijkstra.pyx":47
+      /* "gm/Dijkstra.pyx":43
  *             d2 = shortest_distances[minimum_distance_index]
  *             d = d1 + d2
  *             if d1 > 0 and shortest_distances[v] > d and shortest_path_tree[v] == 0:             # <<<<<<<<<<<<<<
@@ -2963,9 +2857,9 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
       if (__pyx_t_18) {
       } else {
         __pyx_t_16 = __pyx_t_18;
-        goto __pyx_L20_bool_binop_done;
+        goto __pyx_L17_bool_binop_done;
       }
-      __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L1_error)
+      __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 43, __pyx_L1_error)
       __pyx_t_19 = __pyx_t_17;
       __pyx_t_12 = -1;
       if (__pyx_t_19 < 0) {
@@ -2974,15 +2868,15 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
       } else if (unlikely(__pyx_t_19 >= __pyx_v_shortest_distances.shape[0])) __pyx_t_12 = 0;
       if (unlikely(__pyx_t_12 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_12);
-        __PYX_ERR(0, 47, __pyx_L1_error)
+        __PYX_ERR(0, 43, __pyx_L1_error)
       }
       __pyx_t_18 = (((*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_shortest_distances.data) + __pyx_t_19)) ))) > __pyx_v_d) != 0);
       if (__pyx_t_18) {
       } else {
         __pyx_t_16 = __pyx_t_18;
-        goto __pyx_L20_bool_binop_done;
+        goto __pyx_L17_bool_binop_done;
       }
-      __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 47, __pyx_L1_error)
+      __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 43, __pyx_L1_error)
       __pyx_t_19 = __pyx_t_17;
       __pyx_t_12 = -1;
       if (__pyx_t_19 < 0) {
@@ -2991,21 +2885,21 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
       } else if (unlikely(__pyx_t_19 >= __pyx_v_shortest_path_tree.shape[0])) __pyx_t_12 = 0;
       if (unlikely(__pyx_t_12 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_12);
-        __PYX_ERR(0, 47, __pyx_L1_error)
+        __PYX_ERR(0, 43, __pyx_L1_error)
       }
       __pyx_t_18 = (((*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_shortest_path_tree.data) + __pyx_t_19)) ))) == 0) != 0);
       __pyx_t_16 = __pyx_t_18;
-      __pyx_L20_bool_binop_done:;
+      __pyx_L17_bool_binop_done:;
       if (__pyx_t_16) {
 
-        /* "gm/Dijkstra.pyx":48
+        /* "gm/Dijkstra.pyx":44
  *             d = d1 + d2
  *             if d1 > 0 and shortest_distances[v] > d and shortest_path_tree[v] == 0:
  *                 shortest_distances[v] = d             # <<<<<<<<<<<<<<
  *     return shortest_distances
  * 
  */
-        __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L1_error)
+        __pyx_t_17 = __Pyx_PyIndex_AsSsize_t(__pyx_v_v); if (unlikely((__pyx_t_17 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L1_error)
         __pyx_t_19 = __pyx_t_17;
         __pyx_t_12 = -1;
         if (__pyx_t_19 < 0) {
@@ -3014,11 +2908,11 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
         } else if (unlikely(__pyx_t_19 >= __pyx_v_shortest_distances.shape[0])) __pyx_t_12 = 0;
         if (unlikely(__pyx_t_12 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_12);
-          __PYX_ERR(0, 48, __pyx_L1_error)
+          __PYX_ERR(0, 44, __pyx_L1_error)
         }
         *((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_shortest_distances.data) + __pyx_t_19)) )) = __pyx_v_d;
 
-        /* "gm/Dijkstra.pyx":47
+        /* "gm/Dijkstra.pyx":43
  *             d2 = shortest_distances[minimum_distance_index]
  *             d = d1 + d2
  *             if d1 > 0 and shortest_distances[v] > d and shortest_path_tree[v] == 0:             # <<<<<<<<<<<<<<
@@ -3027,8 +2921,8 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
  */
       }
 
-      /* "gm/Dijkstra.pyx":43
- *                 break
+      /* "gm/Dijkstra.pyx":39
+ *                 minimum_distance_index = i
  *         shortest_path_tree[minimum_distance_index] = 1
  *         for v in vertices:             # <<<<<<<<<<<<<<
  *             d1 = graph[minimum_distance_index][v]
@@ -3042,12 +2936,12 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
  * 
  *     for _ in vertices:             # <<<<<<<<<<<<<<
  *         minimum_distance = sys.maxsize
- *         for v in vertices:
+ *         for i, v in enumerate(vertices):
  */
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "gm/Dijkstra.pyx":49
+  /* "gm/Dijkstra.pyx":45
  *             if d1 > 0 and shortest_distances[v] > d and shortest_path_tree[v] == 0:
  *                 shortest_distances[v] = d
  *     return shortest_distances             # <<<<<<<<<<<<<<
@@ -3055,7 +2949,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_shortest_distances, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_shortest_distances, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -3085,9 +2979,8 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
   __PYX_XDEC_MEMVIEW(&__pyx_v_shortest_distances, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_shortest_path_tree, 1);
   __Pyx_XDECREF(__pyx_v__);
-  __Pyx_XDECREF(__pyx_v_v);
   __Pyx_XDECREF(__pyx_v_i);
-  __Pyx_XDECREF(__pyx_v_dist);
+  __Pyx_XDECREF(__pyx_v_v);
   __PYX_XDEC_MEMVIEW(&__pyx_v_vertices, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_v_graph, 1);
   __Pyx_XGIVEREF(__pyx_r);
@@ -3095,7 +2988,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_Dijkstra_to_find_shortest_distances(CYTH
   return __pyx_r;
 }
 
-/* "gm/Dijkstra.pyx":52
+/* "gm/Dijkstra.pyx":48
  * 
  * 
  * def influence_of_a_vertex(Long2D before_removal, Long2D after_removal):             # <<<<<<<<<<<<<<
@@ -3139,11 +3032,11 @@ static PyObject *__pyx_pw_2gm_8Dijkstra_3influence_of_a_vertex(PyObject *__pyx_s
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_after_removal)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("influence_of_a_vertex", 1, 2, 2, 1); __PYX_ERR(0, 52, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("influence_of_a_vertex", 1, 2, 2, 1); __PYX_ERR(0, 48, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "influence_of_a_vertex") < 0)) __PYX_ERR(0, 52, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "influence_of_a_vertex") < 0)) __PYX_ERR(0, 48, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -3151,12 +3044,12 @@ static PyObject *__pyx_pw_2gm_8Dijkstra_3influence_of_a_vertex(PyObject *__pyx_s
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_before_removal = __Pyx_PyObject_to_MemoryviewSlice_d_dc_long(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_before_removal.memview)) __PYX_ERR(0, 52, __pyx_L3_error)
-    __pyx_v_after_removal = __Pyx_PyObject_to_MemoryviewSlice_d_dc_long(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_after_removal.memview)) __PYX_ERR(0, 52, __pyx_L3_error)
+    __pyx_v_before_removal = __Pyx_PyObject_to_MemoryviewSlice_d_dc_long(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_before_removal.memview)) __PYX_ERR(0, 48, __pyx_L3_error)
+    __pyx_v_after_removal = __Pyx_PyObject_to_MemoryviewSlice_d_dc_long(values[1], PyBUF_WRITABLE); if (unlikely(!__pyx_v_after_removal.memview)) __PYX_ERR(0, 48, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("influence_of_a_vertex", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 52, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("influence_of_a_vertex", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 48, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("gm.Dijkstra.influence_of_a_vertex", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3191,7 +3084,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("influence_of_a_vertex", 0);
 
-  /* "gm/Dijkstra.pyx":67
+  /* "gm/Dijkstra.pyx":63
  *     cdef float val_before_removal, val_after_removal
  * 
  *     val_before_removal = 0.0             # <<<<<<<<<<<<<<
@@ -3200,7 +3093,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
  */
   __pyx_v_val_before_removal = 0.0;
 
-  /* "gm/Dijkstra.pyx":68
+  /* "gm/Dijkstra.pyx":64
  * 
  *     val_before_removal = 0.0
  *     val_after_removal = 0.0             # <<<<<<<<<<<<<<
@@ -3209,22 +3102,22 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
  */
   __pyx_v_val_after_removal = 0.0;
 
-  /* "gm/Dijkstra.pyx":70
+  /* "gm/Dijkstra.pyx":66
  *     val_after_removal = 0.0
  * 
  *     for v in before_removal:             # <<<<<<<<<<<<<<
  *         for dist in v:
  *             val_before_removal += dist
  */
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_before_removal, 2, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_before_removal, 2, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
     __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_3 = 0;
     __pyx_t_4 = NULL;
   } else {
-    __pyx_t_3 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
+    __pyx_t_3 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 70, __pyx_L1_error)
+    __pyx_t_4 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   for (;;) {
@@ -3232,17 +3125,17 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
       if (likely(PyList_CheckExact(__pyx_t_2))) {
         if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 70, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 66, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       } else {
         if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 70, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 66, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
       }
@@ -3252,7 +3145,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 70, __pyx_L1_error)
+          else __PYX_ERR(0, 66, __pyx_L1_error)
         }
         break;
       }
@@ -3261,7 +3154,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
     __Pyx_XDECREF_SET(__pyx_v_v, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "gm/Dijkstra.pyx":71
+    /* "gm/Dijkstra.pyx":67
  * 
  *     for v in before_removal:
  *         for dist in v:             # <<<<<<<<<<<<<<
@@ -3272,26 +3165,26 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
       __pyx_t_1 = __pyx_v_v; __Pyx_INCREF(__pyx_t_1); __pyx_t_5 = 0;
       __pyx_t_6 = NULL;
     } else {
-      __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
+      __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 71, __pyx_L1_error)
+      __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 67, __pyx_L1_error)
     }
     for (;;) {
       if (likely(!__pyx_t_6)) {
         if (likely(PyList_CheckExact(__pyx_t_1))) {
           if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_1)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_7 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 71, __pyx_L1_error)
+          __pyx_t_7 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 67, __pyx_L1_error)
           #else
-          __pyx_t_7 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 71, __pyx_L1_error)
+          __pyx_t_7 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           #endif
         } else {
           if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_7 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 71, __pyx_L1_error)
+          __pyx_t_7 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_7); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 67, __pyx_L1_error)
           #else
-          __pyx_t_7 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 71, __pyx_L1_error)
+          __pyx_t_7 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           #endif
         }
@@ -3301,7 +3194,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 71, __pyx_L1_error)
+            else __PYX_ERR(0, 67, __pyx_L1_error)
           }
           break;
         }
@@ -3310,23 +3203,23 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
       __Pyx_XDECREF_SET(__pyx_v_dist, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "gm/Dijkstra.pyx":72
+      /* "gm/Dijkstra.pyx":68
  *     for v in before_removal:
  *         for dist in v:
  *             val_before_removal += dist             # <<<<<<<<<<<<<<
  *     val_before_removal /= len(before_removal)
  * 
  */
-      __pyx_t_7 = PyFloat_FromDouble(__pyx_v_val_before_removal); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 72, __pyx_L1_error)
+      __pyx_t_7 = PyFloat_FromDouble(__pyx_v_val_before_removal); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_8 = PyNumber_InPlaceAdd(__pyx_t_7, __pyx_v_dist); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 72, __pyx_L1_error)
+      __pyx_t_8 = PyNumber_InPlaceAdd(__pyx_t_7, __pyx_v_dist); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_9 = __pyx_PyFloat_AsFloat(__pyx_t_8); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 72, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsFloat(__pyx_t_8); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 68, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __pyx_v_val_before_removal = __pyx_t_9;
 
-      /* "gm/Dijkstra.pyx":71
+      /* "gm/Dijkstra.pyx":67
  * 
  *     for v in before_removal:
  *         for dist in v:             # <<<<<<<<<<<<<<
@@ -3336,7 +3229,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "gm/Dijkstra.pyx":70
+    /* "gm/Dijkstra.pyx":66
  *     val_after_removal = 0.0
  * 
  *     for v in before_removal:             # <<<<<<<<<<<<<<
@@ -3346,7 +3239,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "gm/Dijkstra.pyx":73
+  /* "gm/Dijkstra.pyx":69
  *         for dist in v:
  *             val_before_removal += dist
  *     val_before_removal /= len(before_removal)             # <<<<<<<<<<<<<<
@@ -3356,26 +3249,26 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
   __pyx_t_10 = __Pyx_MemoryView_Len(__pyx_v_before_removal); 
   if (unlikely(__pyx_t_10 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 73, __pyx_L1_error)
+    __PYX_ERR(0, 69, __pyx_L1_error)
   }
   __pyx_v_val_before_removal = (__pyx_v_val_before_removal / __pyx_t_10);
 
-  /* "gm/Dijkstra.pyx":75
+  /* "gm/Dijkstra.pyx":71
  *     val_before_removal /= len(before_removal)
  * 
  *     for v in after_removal:             # <<<<<<<<<<<<<<
  *         for dist in v:
  *             val_after_removal += dist
  */
-  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_after_removal, 2, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_after_removal, 2, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
     __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_3 = 0;
     __pyx_t_4 = NULL;
   } else {
-    __pyx_t_3 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_3 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
+    __pyx_t_4 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
@@ -3383,17 +3276,17 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 75, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 71, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
         if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 75, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 71, __pyx_L1_error)
         #else
-        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
@@ -3403,7 +3296,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 75, __pyx_L1_error)
+          else __PYX_ERR(0, 71, __pyx_L1_error)
         }
         break;
       }
@@ -3412,7 +3305,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
     __Pyx_XDECREF_SET(__pyx_v_v, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "gm/Dijkstra.pyx":76
+    /* "gm/Dijkstra.pyx":72
  * 
  *     for v in after_removal:
  *         for dist in v:             # <<<<<<<<<<<<<<
@@ -3423,26 +3316,26 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
       __pyx_t_2 = __pyx_v_v; __Pyx_INCREF(__pyx_t_2); __pyx_t_5 = 0;
       __pyx_t_6 = NULL;
     } else {
-      __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_v_v); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
+      __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_v_v); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_6 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 76, __pyx_L1_error)
+      __pyx_t_6 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 72, __pyx_L1_error)
     }
     for (;;) {
       if (likely(!__pyx_t_6)) {
         if (likely(PyList_CheckExact(__pyx_t_2))) {
           if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_8 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_8); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 76, __pyx_L1_error)
+          __pyx_t_8 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_8); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 72, __pyx_L1_error)
           #else
-          __pyx_t_8 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 76, __pyx_L1_error)
+          __pyx_t_8 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 72, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
           #endif
         } else {
           if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_8 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_8); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 76, __pyx_L1_error)
+          __pyx_t_8 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_8); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 72, __pyx_L1_error)
           #else
-          __pyx_t_8 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 76, __pyx_L1_error)
+          __pyx_t_8 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 72, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
           #endif
         }
@@ -3452,7 +3345,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 76, __pyx_L1_error)
+            else __PYX_ERR(0, 72, __pyx_L1_error)
           }
           break;
         }
@@ -3461,23 +3354,23 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
       __Pyx_XDECREF_SET(__pyx_v_dist, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "gm/Dijkstra.pyx":77
+      /* "gm/Dijkstra.pyx":73
  *     for v in after_removal:
  *         for dist in v:
  *             val_after_removal += dist             # <<<<<<<<<<<<<<
  *     val_after_removal /= len(after_removal)
  * 
  */
-      __pyx_t_8 = PyFloat_FromDouble(__pyx_v_val_after_removal); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_8 = PyFloat_FromDouble(__pyx_v_val_after_removal); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 73, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_7 = PyNumber_InPlaceAdd(__pyx_t_8, __pyx_v_dist); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_7 = PyNumber_InPlaceAdd(__pyx_t_8, __pyx_v_dist); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 73, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_9 = __pyx_PyFloat_AsFloat(__pyx_t_7); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsFloat(__pyx_t_7); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 73, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_v_val_after_removal = __pyx_t_9;
 
-      /* "gm/Dijkstra.pyx":76
+      /* "gm/Dijkstra.pyx":72
  * 
  *     for v in after_removal:
  *         for dist in v:             # <<<<<<<<<<<<<<
@@ -3487,7 +3380,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "gm/Dijkstra.pyx":75
+    /* "gm/Dijkstra.pyx":71
  *     val_before_removal /= len(before_removal)
  * 
  *     for v in after_removal:             # <<<<<<<<<<<<<<
@@ -3497,7 +3390,7 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gm/Dijkstra.pyx":78
+  /* "gm/Dijkstra.pyx":74
  *         for dist in v:
  *             val_after_removal += dist
  *     val_after_removal /= len(after_removal)             # <<<<<<<<<<<<<<
@@ -3507,23 +3400,23 @@ static PyObject *__pyx_pf_2gm_8Dijkstra_2influence_of_a_vertex(CYTHON_UNUSED PyO
   __pyx_t_10 = __Pyx_MemoryView_Len(__pyx_v_after_removal); 
   if (unlikely(__pyx_t_10 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 78, __pyx_L1_error)
+    __PYX_ERR(0, 74, __pyx_L1_error)
   }
   __pyx_v_val_after_removal = (__pyx_v_val_after_removal / __pyx_t_10);
 
-  /* "gm/Dijkstra.pyx":80
+  /* "gm/Dijkstra.pyx":76
  *     val_after_removal /= len(after_removal)
  * 
  *     return val_before_removal - val_after_removal             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble((__pyx_v_val_before_removal - __pyx_v_val_after_removal)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((__pyx_v_val_before_removal - __pyx_v_val_after_removal)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "gm/Dijkstra.pyx":52
+  /* "gm/Dijkstra.pyx":48
  * 
  * 
  * def influence_of_a_vertex(Long2D before_removal, Long2D after_removal):             # <<<<<<<<<<<<<<
@@ -17445,7 +17338,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 34, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 133, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 148, __pyx_L1_error)
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(1, 180, __pyx_L1_error)
@@ -17661,22 +17554,22 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     """
  *     Description:
  */
-  __pyx_tuple__20 = PyTuple_Pack(14, __pyx_n_s_src_vertex, __pyx_n_s_vertices, __pyx_n_s_graph, __pyx_n_s_minimum_distance_index, __pyx_n_s_minimum_distance, __pyx_n_s_d1, __pyx_n_s_d2, __pyx_n_s_d, __pyx_n_s_shortest_distances, __pyx_n_s_shortest_path_tree, __pyx_n_s__19, __pyx_n_s_v, __pyx_n_s_i, __pyx_n_s_dist); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_tuple__20 = PyTuple_Pack(13, __pyx_n_s_src_vertex, __pyx_n_s_vertices, __pyx_n_s_graph, __pyx_n_s_minimum_distance_index, __pyx_n_s_minimum_distance, __pyx_n_s_d1, __pyx_n_s_d2, __pyx_n_s_d, __pyx_n_s_shortest_distances, __pyx_n_s_shortest_path_tree, __pyx_n_s__19, __pyx_n_s_i, __pyx_n_s_v); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(3, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_Dijkstra_to_find_shortest_distan, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(3, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_Dijkstra_to_find_shortest_distan, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 8, __pyx_L1_error)
 
-  /* "gm/Dijkstra.pyx":52
+  /* "gm/Dijkstra.pyx":48
  * 
  * 
  * def influence_of_a_vertex(Long2D before_removal, Long2D after_removal):             # <<<<<<<<<<<<<<
  *     """
  *     Description:
  */
-  __pyx_tuple__22 = PyTuple_Pack(6, __pyx_n_s_before_removal, __pyx_n_s_after_removal, __pyx_n_s_val_before_removal, __pyx_n_s_val_after_removal, __pyx_n_s_v, __pyx_n_s_dist); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_tuple__22 = PyTuple_Pack(6, __pyx_n_s_before_removal, __pyx_n_s_after_removal, __pyx_n_s_val_before_removal, __pyx_n_s_val_after_removal, __pyx_n_s_v, __pyx_n_s_dist); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_influence_of_a_vertex, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_Dijkstra_pyx, __pyx_n_s_influence_of_a_vertex, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 48, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -18123,16 +18016,16 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Dijkstra_to_find_shortest_distan, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gm/Dijkstra.pyx":52
+  /* "gm/Dijkstra.pyx":48
  * 
  * 
  * def influence_of_a_vertex(Long2D before_removal, Long2D after_removal):             # <<<<<<<<<<<<<<
  *     """
  *     Description:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_8Dijkstra_3influence_of_a_vertex, NULL, __pyx_n_s_gm_Dijkstra); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_8Dijkstra_3influence_of_a_vertex, NULL, __pyx_n_s_gm_Dijkstra); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_influence_of_a_vertex, __pyx_t_1) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_influence_of_a_vertex, __pyx_t_1) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "gm/Dijkstra.pyx":1
