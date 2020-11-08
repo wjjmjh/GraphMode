@@ -52,7 +52,6 @@ setup(
             CythonExtension("gm.comparison_based_sorting"),
             CythonExtension("gm.Dijkstra"),
             CythonExtension("gm.dynamic_programming"),
-            CythonExtension("gm.type_error_fix"),
         ]
     ),
 )
