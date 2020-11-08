@@ -1,5 +1,4 @@
 import os
-import uuid
 
 from gm.utils.datetime_ import now
 from gm.utils.repo_path import repoPathManager
@@ -36,7 +35,7 @@ def read_txt(filename):
 
 
 def read_graph_from_txt_files(vertices_txt, edges_txt):
-    from gm.graph import Edge, Graph, Vertex
+    from gm.main_objects.graph import Edge, Graph, Vertex
 
     vertices = [
         Vertex(line.split(" ")[0], line.split(" ")[1])

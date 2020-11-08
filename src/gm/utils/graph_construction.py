@@ -2,7 +2,7 @@ import random
 
 import numpy
 
-from gm.graph import Edge, Graph, Vertex
+from gm.main_objects.graph import Edge, Graph, Vertex
 from gm.utils.io_ import read_graph_from_txt_files
 
 
