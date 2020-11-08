@@ -69,7 +69,7 @@ class Edge:
         )
 
     def to_tuple(self):
-        return (self._vertices[0].index, self._vertices[1].index, self._cost)
+        return (self._vertices[0], self._vertices[1], self._cost)
 
 
 class Graph:
