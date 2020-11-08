@@ -15,12 +15,11 @@ def _a_fname(fn, suffix):
     data_store_path = repo_path.output
     dn = now()
     _mkdir(os.path.join(data_store_path, dn))
-    id = uuid.uuid4()
     print("this io stream session has id: {}".format(id))
     return os.path.join(
         data_store_path,
         dn,
-        "{fn}_{id}.{suffix}".format(fn=fn, id=id, suffix=suffix),
+        "{fn}.{suffix}".format(fn=fn, suffix=suffix),
     )
 
 
