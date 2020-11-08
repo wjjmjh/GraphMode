@@ -34,3 +34,20 @@ def read_txt(filename):
     with open(filename, "r", encoding="utf-8") as txt_file:
         lines = txt_file.readlines()
         return [line.replace("\n", "") for line in lines]
+
+
+def read_graph_from_txt_files(vertices_txt, edges_txt):
+    from gm.graph import Edge, Graph, Vertex
+
+    vertices = [
+        Vertex(line.split(" ")[0], line.split(" ")[1])
+        for line in read_txt(vertices_txt)
+    ]
+    edges = [
+        Edge((line.split(" ")[0], line.split(" ")[1]), line.split(" ")[2])
+        for line in read_txt(edges_txt)
+    ]
+    g = Graph()
+    g.vertices = vertices
+    g.edges = edges
+    return g
