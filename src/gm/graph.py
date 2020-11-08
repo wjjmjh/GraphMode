@@ -34,6 +34,9 @@ class Edge:
             cost=self.cost,
         )
 
+    def to_tuple(self):
+        return (self.vertices[0].index, self.vertices[1].index, self.cost)
+
 
 class Graph:
     """
@@ -56,6 +59,14 @@ class Graph:
     @vertices.setter
     def vertices(self, new_vertices):
         self._vertices = new_vertices
+
+    @property
+    def len_vertices(self):
+        return len(self._vertices)
+
+    @property
+    def len_edges(self):
+        return len(self._edges)
 
     @property
     def edges(self):
