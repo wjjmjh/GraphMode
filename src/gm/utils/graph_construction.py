@@ -1,6 +1,9 @@
 import random
 
+import numpy
+
 from gm.graph import Edge, Graph, Vertex
+from gm.utils.io_ import read_graph_from_txt_files
 
 
 def generate_topological_graph(
@@ -31,8 +34,8 @@ def generate_topological_graph(
                 topological_graph.append_edge(
                     Edge(
                         (
-                            parental_vertex,
-                            topological_graph.vertices[-1],
+                            parental_vertex.index,
+                            topological_graph.vertices[-1].index,
                         ),
                         min_cost,
                     )
@@ -41,8 +44,8 @@ def generate_topological_graph(
                 topological_graph.append_edge(
                     Edge(
                         (
-                            parental_vertex,
-                            topological_graph.vertices[-(ver + 1)],
+                            parental_vertex.index,
+                            topological_graph.vertices[-(ver + 1)].index,
                         ),
                         random.randint(min_cost + 1, max_cost),
                     )
@@ -54,14 +57,31 @@ class GraphConstructor:
     def __init__(self, graph=None):
         self.graph = graph
 
-    def graph_from_input_files(self):
-        pass
+    def graph_from_input_files(self, vertices_input_txt, edges_input_txt):
+        got = read_graph_from_txt_files(vertices_input_txt, edges_input_txt)
+        self.graph = got
 
-    def dijkstra_input_graph(self):
-        pass
+    def dijkstra_input_vertices_and_distance_matrix(self):
+        if self.graph is None:
+            raise ValueError(
+                "Please properly construct Graph object, the current graph is None."
+            )
+        vertices = numpy.array([v.index for v in self.graph.vertices]).astype(
+            numpy.int64
+        )
+        dm = numpy.array(self.graph.compute_distance_matrix()).astype(numpy.int64)
+        return vertices, dm
 
-    def dp_input_graph(self):
-        pass
+    def dp_input_edges(self):
+        if self.graph is None:
+            raise ValueError(
+                "Please properly construct Graph object, the current graph is None."
+            )
+        return [edge.to_tuple() for edge in self.graph.edges]
 
     def comparison_sorting_input_vertices(self):
-        pass
+        if self.graph is None:
+            raise ValueError(
+                "Please properly construct Graph object, the current graph is None."
+            )
+        return self.graph.vertices
