@@ -53,6 +53,11 @@ class repoPathManager:
         return self.combine("dp_tests", "test_data")
 
     @property
+    def Dijkstra_test_data(self):
+        self.find_tests()
+        return self.combine("Dijkstra_tests", "test_data")
+
+    @property
     @_wrapping_refreshing
     def gm(self):
         self.find_src()

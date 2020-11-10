@@ -12,7 +12,7 @@ from gm.utils.tester import TestCase
 
 class DijkstraAlgorithmsTests(TestCase):
     def setUp(self) -> None:
-        self.test_data = repoPathManager().test_data
+        self.test_data = repoPathManager().Dijkstra_test_data
         self.offset = 800
         self.gc = GraphConstructor()
 
