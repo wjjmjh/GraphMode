@@ -38,6 +38,11 @@ class repoPathManager:
         return self
 
     @property
+    def test_data(self):
+        self.find_root()
+        return self.combine("tests", "test_data")
+
+    @property
     @_wrapping_refreshing
     def gm(self):
         self.find_src()
