@@ -10,3 +10,5 @@ dependencies:
     - Cython
     - numpy
     - pytest
+    - linetimer
+    - matplotlib
