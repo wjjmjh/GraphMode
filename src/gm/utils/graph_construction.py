@@ -86,27 +86,3 @@ class GraphConstructor:
                 "Please properly construct Graph object, the current graph is None."
             )
         return self.graph.vertices
-
-
-if __name__ == "__main__":
-
-    def foo():
-        g = Graph()
-        got = generate_topological_graph(g, 3, 800, 1, 10, 1, 10)
-        got.to_txt()
-
-    def boo():
-        from gm.main import Dijkstra_to_find_shortest_distances
-
-        gc = GraphConstructor()
-        gc.graph_from_input_files(
-            "/home/stephen/Documents/dev/repos/GraphMode/tests/test_data/vertices_testcase5.txt",
-            "/home/stephen/Documents/dev/repos/GraphMode/tests/test_data/edges_testcase5.txt",
-        )
-        vertices, dm = gc.dijkstra_input_vertices_and_distance_matrix()
-        src_vertex = 0
-        got = Dijkstra_to_find_shortest_distances(src_vertex, vertices, dm)
-        for stuff in got:
-            print(stuff)
-
-    boo()
