@@ -37,10 +37,20 @@ class repoPathManager:
         self.base = os.path.sep.join(explore[: explore.index("src") + 1])
         return self
 
+    def find_tests(self):
+        explore = str(os.path.dirname(os.path.abspath(__file__))).split(os.sep)
+        self.base = os.path.sep.join(explore[: explore.index("tests") + 1])
+        return self
+
     @property
     def test_data(self):
         self.find_root()
         return self.combine("tests", "test_data")
+
+    @property
+    def dp_test_data(self):
+        self.find_tests()
+        return self.combine("dp_tests", "test_data")
 
     @property
     @_wrapping_refreshing
