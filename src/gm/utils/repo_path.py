@@ -38,8 +38,8 @@ class repoPathManager:
         return self
 
     def find_tests(self):
-        explore = str(os.path.dirname(os.path.abspath(__file__))).split(os.sep)
-        self.base = os.path.sep.join(explore[: explore.index("tests") + 1])
+        self.find_root()
+        self._combine_one("tests")
         return self
 
     @property
