@@ -17,20 +17,22 @@ class ComparisonBasedSortingTests(TestCase):
         self.gc = GraphConstructor()
 
     def _template(self, test_case_number):
-        vertices = numpy.array(
-            [
-                v.impact
-                for v in read_vertices_from_txt_files(
-                    os.path.join(
-                        self.test_data,
-                        "vertices_testcase{}.txt".format(str(test_case_number)),
-                    )
-                )
-            ]
-        ).astype(numpy.int64)
-        sort_vertices_based_on_comparison(vertices)
-        self.assertEqual(vertices[0], 1)
-        self.assertEqual(vertices[-1], 10)
+        got = read_vertices_from_txt_files(
+            os.path.join(
+                self.test_data,
+                "vertices_testcase{}.txt".format(str(test_case_number)),
+            )
+        )
+        impacts = numpy.array([v.impact for v in got]).astype(numpy.int64)
+        vertices = dict()
+        for vertex in got:
+            if vertex.impact not in vertices.keys():
+                vertices[vertex.impact] = [vertex]
+            else:
+                vertices[vertex.impact].append(vertex)
+        sorted_vertices = sort_vertices_based_on_comparison(vertices, impacts)
+        self.assertEqual(sorted_vertices[0].impact, 1)
+        self.assertEqual(sorted_vertices[-1].impact, 10)
 
     def test_case1(self):
         self._template(1)

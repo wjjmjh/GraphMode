@@ -1868,13 +1868,13 @@ static const char __pyx_k_struct[] = "struct";
 static const char __pyx_k_unpack[] = "unpack";
 static const char __pyx_k_update[] = "update";
 static const char __pyx_k_fortran[] = "fortran";
+static const char __pyx_k_impacts[] = "impacts";
 static const char __pyx_k_memview[] = "memview";
 static const char __pyx_k_Ellipsis[] = "Ellipsis";
 static const char __pyx_k_getstate[] = "__getstate__";
 static const char __pyx_k_itemsize[] = "itemsize";
 static const char __pyx_k_pyx_type[] = "__pyx_type";
 static const char __pyx_k_setstate[] = "__setstate__";
-static const char __pyx_k_vertices[] = "vertices";
 static const char __pyx_k_TypeError[] = "TypeError";
 static const char __pyx_k_enumerate[] = "enumerate";
 static const char __pyx_k_pyx_state[] = "__pyx_state";
@@ -1921,7 +1921,7 @@ static const char __pyx_k_Out_of_bounds_on_buffer_access_a[] = "Out of bounds on
 static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to convert item to object";
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension %d (got %d and %d)";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
-static const char __pyx_k_sort_vertices_based_on_compariso[] = "sort_vertices_based_on_comparison";
+static const char __pyx_k_sort_impacts_based_on_comparison[] = "sort_impacts_based_on_comparison";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
 static PyObject *__pyx_n_s_ASCII;
 static PyObject *__pyx_kp_s_Buffer_view_does_not_expose_stri;
@@ -1968,6 +1968,7 @@ static PyObject *__pyx_n_s_gm_comparison_based_sorting;
 static PyObject *__pyx_kp_s_got_differing_extents_in_dimensi;
 static PyObject *__pyx_n_s_i;
 static PyObject *__pyx_n_s_id;
+static PyObject *__pyx_n_s_impacts;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_itemsize;
 static PyObject *__pyx_kp_s_itemsize_0_for_cython_array;
@@ -2001,7 +2002,7 @@ static PyObject *__pyx_n_s_setstate;
 static PyObject *__pyx_n_s_setstate_cython;
 static PyObject *__pyx_n_s_shape;
 static PyObject *__pyx_n_s_size;
-static PyObject *__pyx_n_s_sort_vertices_based_on_compariso;
+static PyObject *__pyx_n_s_sort_impacts_based_on_comparison;
 static PyObject *__pyx_kp_s_src_gm_comparison_based_sorting;
 static PyObject *__pyx_n_s_start;
 static PyObject *__pyx_n_s_step;
@@ -2017,8 +2018,7 @@ static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
 static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
-static PyObject *__pyx_n_s_vertices;
-static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_vertices_based_on_comparison(CYTHON_UNUSED PyObject *__pyx_self, __pyx_t_2gm_24comparison_based_sorting_Long1D __pyx_v_vertices); /* proto */
+static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_impacts_based_on_comparison(CYTHON_UNUSED PyObject *__pyx_self, __pyx_t_2gm_24comparison_based_sorting_Long1D __pyx_v_impacts); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2101,40 +2101,40 @@ static PyObject *__pyx_codeobj__27;
 /* "gm/comparison_based_sorting.pyx":8
  * 
  * 
- * def sort_vertices_based_on_comparison(Long1D vertices):             # <<<<<<<<<<<<<<
+ * def sort_impacts_based_on_comparison(Long1D impacts):             # <<<<<<<<<<<<<<
  *     """
  *     Descriptions:
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison(PyObject *__pyx_self, PyObject *__pyx_arg_vertices); /*proto*/
-static char __pyx_doc_2gm_24comparison_based_sorting_sort_vertices_based_on_comparison[] = "\n    Descriptions:\n    A function takes an array of vertices as input, and return its sorted version, based on\n    comparisons.\n\n    Input parameters:\n    vertices: an array of Vertex objects to be sorted;\n    order: a string that specifies the comparison-based sorting is ascending or descending;\n\n    Return:\n    A sorted array of vertices.\n    ";
-static PyMethodDef __pyx_mdef_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison = {"sort_vertices_based_on_comparison", (PyCFunction)__pyx_pw_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison, METH_O, __pyx_doc_2gm_24comparison_based_sorting_sort_vertices_based_on_comparison};
-static PyObject *__pyx_pw_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison(PyObject *__pyx_self, PyObject *__pyx_arg_vertices) {
-  __pyx_t_2gm_24comparison_based_sorting_Long1D __pyx_v_vertices = { 0, 0, { 0 }, { 0 }, { 0 } };
+static PyObject *__pyx_pw_2gm_24comparison_based_sorting_1sort_impacts_based_on_comparison(PyObject *__pyx_self, PyObject *__pyx_arg_impacts); /*proto*/
+static char __pyx_doc_2gm_24comparison_based_sorting_sort_impacts_based_on_comparison[] = "\n    Descriptions:\n    A function takes an array of vertices as input, and return its sorted version, based on\n    comparisons.\n\n    Input parameters:\n    vertices: an array of Vertex objects to be sorted;\n    order: a string that specifies the comparison-based sorting is ascending or descending;\n\n    Return:\n    A sorted array of vertices.\n    ";
+static PyMethodDef __pyx_mdef_2gm_24comparison_based_sorting_1sort_impacts_based_on_comparison = {"sort_impacts_based_on_comparison", (PyCFunction)__pyx_pw_2gm_24comparison_based_sorting_1sort_impacts_based_on_comparison, METH_O, __pyx_doc_2gm_24comparison_based_sorting_sort_impacts_based_on_comparison};
+static PyObject *__pyx_pw_2gm_24comparison_based_sorting_1sort_impacts_based_on_comparison(PyObject *__pyx_self, PyObject *__pyx_arg_impacts) {
+  __pyx_t_2gm_24comparison_based_sorting_Long1D __pyx_v_impacts = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("sort_vertices_based_on_comparison (wrapper)", 0);
-  assert(__pyx_arg_vertices); {
-    __pyx_v_vertices = __Pyx_PyObject_to_MemoryviewSlice_dc_long(__pyx_arg_vertices, PyBUF_WRITABLE); if (unlikely(!__pyx_v_vertices.memview)) __PYX_ERR(0, 8, __pyx_L3_error)
+  __Pyx_RefNannySetupContext("sort_impacts_based_on_comparison (wrapper)", 0);
+  assert(__pyx_arg_impacts); {
+    __pyx_v_impacts = __Pyx_PyObject_to_MemoryviewSlice_dc_long(__pyx_arg_impacts, PyBUF_WRITABLE); if (unlikely(!__pyx_v_impacts.memview)) __PYX_ERR(0, 8, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("gm.comparison_based_sorting.sort_vertices_based_on_comparison", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gm.comparison_based_sorting.sort_impacts_based_on_comparison", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_2gm_24comparison_based_sorting_sort_vertices_based_on_comparison(__pyx_self, __pyx_v_vertices);
+  __pyx_r = __pyx_pf_2gm_24comparison_based_sorting_sort_impacts_based_on_comparison(__pyx_self, __pyx_v_impacts);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_vertices_based_on_comparison(CYTHON_UNUSED PyObject *__pyx_self, __pyx_t_2gm_24comparison_based_sorting_Long1D __pyx_v_vertices) {
+static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_impacts_based_on_comparison(CYTHON_UNUSED PyObject *__pyx_self, __pyx_t_2gm_24comparison_based_sorting_Long1D __pyx_v_impacts) {
   int __pyx_v_i;
   int __pyx_v_j;
   long __pyx_v_k;
@@ -2151,53 +2151,53 @@ static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_vertices_based_on_
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("sort_vertices_based_on_comparison", 0);
+  __Pyx_RefNannySetupContext("sort_impacts_based_on_comparison", 0);
 
   /* "gm/comparison_based_sorting.pyx":24
  *     cdef long k
  * 
- *     for i in range(1, len(vertices)):             # <<<<<<<<<<<<<<
- *         k = vertices[i]
+ *     for i in range(1, len(impacts)):             # <<<<<<<<<<<<<<
+ *         k = impacts[i]
  *         j = i - 1
  */
-  __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_vertices); 
+  __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_impacts); 
   __pyx_t_2 = __pyx_t_1;
   for (__pyx_t_3 = 1; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
     /* "gm/comparison_based_sorting.pyx":25
  * 
- *     for i in range(1, len(vertices)):
- *         k = vertices[i]             # <<<<<<<<<<<<<<
+ *     for i in range(1, len(impacts)):
+ *         k = impacts[i]             # <<<<<<<<<<<<<<
  *         j = i - 1
- *         while j >= 0 and k < vertices[j]:
+ *         while j >= 0 and k < impacts[j]:
  */
     __pyx_t_4 = __pyx_v_i;
     __pyx_t_5 = -1;
     if (__pyx_t_4 < 0) {
-      __pyx_t_4 += __pyx_v_vertices.shape[0];
+      __pyx_t_4 += __pyx_v_impacts.shape[0];
       if (unlikely(__pyx_t_4 < 0)) __pyx_t_5 = 0;
-    } else if (unlikely(__pyx_t_4 >= __pyx_v_vertices.shape[0])) __pyx_t_5 = 0;
+    } else if (unlikely(__pyx_t_4 >= __pyx_v_impacts.shape[0])) __pyx_t_5 = 0;
     if (unlikely(__pyx_t_5 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_5);
       __PYX_ERR(0, 25, __pyx_L1_error)
     }
-    __pyx_v_k = (*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_vertices.data) + __pyx_t_4)) )));
+    __pyx_v_k = (*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_impacts.data) + __pyx_t_4)) )));
 
     /* "gm/comparison_based_sorting.pyx":26
- *     for i in range(1, len(vertices)):
- *         k = vertices[i]
+ *     for i in range(1, len(impacts)):
+ *         k = impacts[i]
  *         j = i - 1             # <<<<<<<<<<<<<<
- *         while j >= 0 and k < vertices[j]:
- *             vertices[j + 1] = vertices[j]
+ *         while j >= 0 and k < impacts[j]:
+ *             impacts[j + 1] = impacts[j]
  */
     __pyx_v_j = (__pyx_v_i - 1);
 
     /* "gm/comparison_based_sorting.pyx":27
- *         k = vertices[i]
+ *         k = impacts[i]
  *         j = i - 1
- *         while j >= 0 and k < vertices[j]:             # <<<<<<<<<<<<<<
- *             vertices[j + 1] = vertices[j]
+ *         while j >= 0 and k < impacts[j]:             # <<<<<<<<<<<<<<
+ *             impacts[j + 1] = impacts[j]
  *             j -= 1
  */
     while (1) {
@@ -2210,31 +2210,31 @@ static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_vertices_based_on_
       __pyx_t_4 = __pyx_v_j;
       __pyx_t_5 = -1;
       if (__pyx_t_4 < 0) {
-        __pyx_t_4 += __pyx_v_vertices.shape[0];
+        __pyx_t_4 += __pyx_v_impacts.shape[0];
         if (unlikely(__pyx_t_4 < 0)) __pyx_t_5 = 0;
-      } else if (unlikely(__pyx_t_4 >= __pyx_v_vertices.shape[0])) __pyx_t_5 = 0;
+      } else if (unlikely(__pyx_t_4 >= __pyx_v_impacts.shape[0])) __pyx_t_5 = 0;
       if (unlikely(__pyx_t_5 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_5);
         __PYX_ERR(0, 27, __pyx_L1_error)
       }
-      __pyx_t_7 = ((__pyx_v_k < (*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_vertices.data) + __pyx_t_4)) )))) != 0);
+      __pyx_t_7 = ((__pyx_v_k < (*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_impacts.data) + __pyx_t_4)) )))) != 0);
       __pyx_t_6 = __pyx_t_7;
       __pyx_L7_bool_binop_done:;
       if (!__pyx_t_6) break;
 
       /* "gm/comparison_based_sorting.pyx":28
  *         j = i - 1
- *         while j >= 0 and k < vertices[j]:
- *             vertices[j + 1] = vertices[j]             # <<<<<<<<<<<<<<
+ *         while j >= 0 and k < impacts[j]:
+ *             impacts[j + 1] = impacts[j]             # <<<<<<<<<<<<<<
  *             j -= 1
- *         vertices[j + 1] = k
+ *         impacts[j + 1] = k
  */
       __pyx_t_4 = __pyx_v_j;
       __pyx_t_5 = -1;
       if (__pyx_t_4 < 0) {
-        __pyx_t_4 += __pyx_v_vertices.shape[0];
+        __pyx_t_4 += __pyx_v_impacts.shape[0];
         if (unlikely(__pyx_t_4 < 0)) __pyx_t_5 = 0;
-      } else if (unlikely(__pyx_t_4 >= __pyx_v_vertices.shape[0])) __pyx_t_5 = 0;
+      } else if (unlikely(__pyx_t_4 >= __pyx_v_impacts.shape[0])) __pyx_t_5 = 0;
       if (unlikely(__pyx_t_5 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_5);
         __PYX_ERR(0, 28, __pyx_L1_error)
@@ -2242,46 +2242,46 @@ static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_vertices_based_on_
       __pyx_t_8 = (__pyx_v_j + 1);
       __pyx_t_5 = -1;
       if (__pyx_t_8 < 0) {
-        __pyx_t_8 += __pyx_v_vertices.shape[0];
+        __pyx_t_8 += __pyx_v_impacts.shape[0];
         if (unlikely(__pyx_t_8 < 0)) __pyx_t_5 = 0;
-      } else if (unlikely(__pyx_t_8 >= __pyx_v_vertices.shape[0])) __pyx_t_5 = 0;
+      } else if (unlikely(__pyx_t_8 >= __pyx_v_impacts.shape[0])) __pyx_t_5 = 0;
       if (unlikely(__pyx_t_5 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_5);
         __PYX_ERR(0, 28, __pyx_L1_error)
       }
-      *((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_vertices.data) + __pyx_t_8)) )) = (*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_vertices.data) + __pyx_t_4)) )));
+      *((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_impacts.data) + __pyx_t_8)) )) = (*((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_impacts.data) + __pyx_t_4)) )));
 
       /* "gm/comparison_based_sorting.pyx":29
- *         while j >= 0 and k < vertices[j]:
- *             vertices[j + 1] = vertices[j]
+ *         while j >= 0 and k < impacts[j]:
+ *             impacts[j + 1] = impacts[j]
  *             j -= 1             # <<<<<<<<<<<<<<
- *         vertices[j + 1] = k
+ *         impacts[j + 1] = k
  */
       __pyx_v_j = (__pyx_v_j - 1);
     }
 
     /* "gm/comparison_based_sorting.pyx":30
- *             vertices[j + 1] = vertices[j]
+ *             impacts[j + 1] = impacts[j]
  *             j -= 1
- *         vertices[j + 1] = k             # <<<<<<<<<<<<<<
+ *         impacts[j + 1] = k             # <<<<<<<<<<<<<<
  */
     __pyx_t_4 = (__pyx_v_j + 1);
     __pyx_t_5 = -1;
     if (__pyx_t_4 < 0) {
-      __pyx_t_4 += __pyx_v_vertices.shape[0];
+      __pyx_t_4 += __pyx_v_impacts.shape[0];
       if (unlikely(__pyx_t_4 < 0)) __pyx_t_5 = 0;
-    } else if (unlikely(__pyx_t_4 >= __pyx_v_vertices.shape[0])) __pyx_t_5 = 0;
+    } else if (unlikely(__pyx_t_4 >= __pyx_v_impacts.shape[0])) __pyx_t_5 = 0;
     if (unlikely(__pyx_t_5 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_5);
       __PYX_ERR(0, 30, __pyx_L1_error)
     }
-    *((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_vertices.data) + __pyx_t_4)) )) = __pyx_v_k;
+    *((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_impacts.data) + __pyx_t_4)) )) = __pyx_v_k;
   }
 
   /* "gm/comparison_based_sorting.pyx":8
  * 
  * 
- * def sort_vertices_based_on_comparison(Long1D vertices):             # <<<<<<<<<<<<<<
+ * def sort_impacts_based_on_comparison(Long1D impacts):             # <<<<<<<<<<<<<<
  *     """
  *     Descriptions:
  */
@@ -2290,10 +2290,10 @@ static PyObject *__pyx_pf_2gm_24comparison_based_sorting_sort_vertices_based_on_
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("gm.comparison_based_sorting.sort_vertices_based_on_comparison", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gm.comparison_based_sorting.sort_impacts_based_on_comparison", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
-  __PYX_XDEC_MEMVIEW(&__pyx_v_vertices, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_v_impacts, 1);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
@@ -16123,6 +16123,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_got_differing_extents_in_dimensi, __pyx_k_got_differing_extents_in_dimensi, sizeof(__pyx_k_got_differing_extents_in_dimensi), 0, 0, 1, 0},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
   {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
+  {&__pyx_n_s_impacts, __pyx_k_impacts, sizeof(__pyx_k_impacts), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_itemsize, __pyx_k_itemsize, sizeof(__pyx_k_itemsize), 0, 0, 1, 1},
   {&__pyx_kp_s_itemsize_0_for_cython_array, __pyx_k_itemsize_0_for_cython_array, sizeof(__pyx_k_itemsize_0_for_cython_array), 0, 0, 1, 0},
@@ -16156,7 +16157,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_setstate_cython, __pyx_k_setstate_cython, sizeof(__pyx_k_setstate_cython), 0, 0, 1, 1},
   {&__pyx_n_s_shape, __pyx_k_shape, sizeof(__pyx_k_shape), 0, 0, 1, 1},
   {&__pyx_n_s_size, __pyx_k_size, sizeof(__pyx_k_size), 0, 0, 1, 1},
-  {&__pyx_n_s_sort_vertices_based_on_compariso, __pyx_k_sort_vertices_based_on_compariso, sizeof(__pyx_k_sort_vertices_based_on_compariso), 0, 0, 1, 1},
+  {&__pyx_n_s_sort_impacts_based_on_comparison, __pyx_k_sort_impacts_based_on_comparison, sizeof(__pyx_k_sort_impacts_based_on_comparison), 0, 0, 1, 1},
   {&__pyx_kp_s_src_gm_comparison_based_sorting, __pyx_k_src_gm_comparison_based_sorting, sizeof(__pyx_k_src_gm_comparison_based_sorting), 0, 0, 1, 0},
   {&__pyx_n_s_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 0, 1, 1},
   {&__pyx_n_s_step, __pyx_k_step, sizeof(__pyx_k_step), 0, 0, 1, 1},
@@ -16172,7 +16173,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_unable_to_allocate_shape_and_str, __pyx_k_unable_to_allocate_shape_and_str, sizeof(__pyx_k_unable_to_allocate_shape_and_str), 0, 0, 1, 0},
   {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
-  {&__pyx_n_s_vertices, __pyx_k_vertices, sizeof(__pyx_k_vertices), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
@@ -16388,14 +16388,14 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "gm/comparison_based_sorting.pyx":8
  * 
  * 
- * def sort_vertices_based_on_comparison(Long1D vertices):             # <<<<<<<<<<<<<<
+ * def sort_impacts_based_on_comparison(Long1D impacts):             # <<<<<<<<<<<<<<
  *     """
  *     Descriptions:
  */
-  __pyx_tuple__19 = PyTuple_Pack(5, __pyx_n_s_vertices, __pyx_n_s_vertices, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_k); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(5, __pyx_n_s_impacts, __pyx_n_s_impacts, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_k); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_comparison_based_sorting, __pyx_n_s_sort_vertices_based_on_compariso, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_gm_comparison_based_sorting, __pyx_n_s_sort_impacts_based_on_comparison, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 8, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -16833,13 +16833,13 @@ if (!__Pyx_RefNanny) {
   /* "gm/comparison_based_sorting.pyx":8
  * 
  * 
- * def sort_vertices_based_on_comparison(Long1D vertices):             # <<<<<<<<<<<<<<
+ * def sort_impacts_based_on_comparison(Long1D impacts):             # <<<<<<<<<<<<<<
  *     """
  *     Descriptions:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_24comparison_based_sorting_1sort_vertices_based_on_comparison, NULL, __pyx_n_s_gm_comparison_based_sorting); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_2gm_24comparison_based_sorting_1sort_impacts_based_on_comparison, NULL, __pyx_n_s_gm_comparison_based_sorting); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sort_vertices_based_on_compariso, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sort_impacts_based_on_comparison, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "gm/comparison_based_sorting.pyx":1

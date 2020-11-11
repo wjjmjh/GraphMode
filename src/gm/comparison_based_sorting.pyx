@@ -5,7 +5,7 @@ import numpy
 include "../include/numerical_pyrex.pyx"
 
 
-def sort_vertices_based_on_comparison(Long1D vertices):
+def sort_impacts_based_on_comparison(Long1D impacts):
     """
     Descriptions:
     A function takes an array of vertices as input, and return its sorted version, based on
@@ -21,10 +21,10 @@ def sort_vertices_based_on_comparison(Long1D vertices):
     cdef int i, j
     cdef long k
 
-    for i in range(1, len(vertices)):
-        k = vertices[i]
+    for i in range(1, len(impacts)):
+        k = impacts[i]
         j = i - 1
-        while j >= 0 and k < vertices[j]:
-            vertices[j + 1] = vertices[j]
+        while j >= 0 and k < impacts[j]:
+            impacts[j + 1] = impacts[j]
             j -= 1
-        vertices[j + 1] = k
+        impacts[j + 1] = k
