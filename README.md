@@ -14,6 +14,3 @@
 ![pic](hello_world.png)  
 ##### func demo 2 (`Dijkstra_to_find_shortest_paths`):  
 ![pic](Dijkstra_to_find_shortest_paths.png)  
-
-
-
