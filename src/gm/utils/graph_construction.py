@@ -6,6 +6,13 @@ from gm.main_objects.graph import Edge, Graph, Vertex
 from gm.utils.io_ import read_graph_from_txt_files
 
 
+def generate_vertices_with_impacts(number_of_vertices, min_impact, max_impact):
+    return [
+        Vertex(i, random.randint(min_impact, max_impact))
+        for i in range(number_of_vertices)
+    ]
+
+
 def generate_topological_graph(
     topological_graph,
     number_of_vertices_per_layer,

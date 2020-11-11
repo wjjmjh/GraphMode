@@ -27,7 +27,7 @@ def compute_influence_of_a_vertex(before_removal, after_removal):
 
 
 def sort_vertices_based_on_comparison(vertices):
-    return comparison_based_sorting.sort_vertices_based_on_comparison(vertices)
+    comparison_based_sorting.sort_vertices_based_on_comparison(vertices)
 
 
 _funcs = [

@@ -49,3 +49,12 @@ def read_graph_from_txt_files(vertices_txt, edges_txt):
     g.vertices = vertices
     g.edges = edges
     return g
+
+
+def read_vertices_from_txt_files(vertices_txt):
+    from gm.main_objects.graph import Vertex
+
+    return [
+        Vertex(line.split(" ")[0], line.split(" ")[1])
+        for line in read_txt(vertices_txt)
+    ]
