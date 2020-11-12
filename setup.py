@@ -44,7 +44,7 @@ setup(
     description="An app that defines graphs.",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    install_requires=["Cython", "numpy", "pytest", "linetimer", "matplotlib"],
+    install_requires=["Cython", "numpy", "pytest", "matplotlib"],
     extras_require={"dev": []},
     ext_modules=cythonize(
         [

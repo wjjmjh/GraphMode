@@ -1,16 +1,84 @@
-# A Cython software package that performs algorithms on a graph.  
-## Installation  
-`pip install ./GraphMode`  
-#### This command would trigger setup.py to set up the software package and compile core functions into C codes.  
-### Installation DEMO  
-![pic](gm_installation_demo.png)  
+# A Python/Cython software library that performs algorithms on a graph.  
+
+## Software running platform:  
+### Linux
+
+## Installation and Compilation  
+
+### If you are a user:  
+#### Dependency:
+Python package-management system: `pip`  
+![pic](resources/readme_pics/gm_demo4.png)   
+#### Commands:  
+`pip install ./GraphMode/`  
+This command will do everything for ya!  
+It will compile necessary Python codes into C codes and set up the software.  
+![pic](resources/readme_pics/gm_demo1.png)    
+
+### If you are a developer (If you wanna hack codes or run the tests using pytest):    
+#### Dependency:  
+Anaconda or Miniconda  
+![pic](resources/readme_pics/gm_demo3.png)   
+#### Steps:    
+1, Use Anaconda or Miniconda to generate an environment, we call the environment `graph_mode_conda_env` here.
+![pic](resources/readme_pics/gm_demo2.png)    
+2, Activate the conda environment just generated.  
+![pic](resources/readme_pics/gm_demo5.png)    
+3, make sure you are now at the root of the project:  
+![pic](resources/readme_pics/gm_demo6.png)    
+4, pip install all the dependencies in terms of `Cython`, `numpy`, `pytest` and `matplotlib`:  
+`>>> pip install Cython`  
+`>>> pip install numpy`  
+`>>> pip install pytest`  
+`>>> pip install matplotlib`  
+and pip install this project itself to setup everything.  
+`>>> pip install --editable .`  
+You are good to go!  
+
+### Test if the installation is successful (for both users and developers):  
+#### Basically, if you can do the things below, you are legitimately good to go!  
+![pic](resources/readme_pics/gm_demo7.png)   
+
+## main objects introduction:  
+### Vertex
+implemented in: `./GraphMode/src/gm/main_objects/graph.py`  
+An object having an ID (index) and a weight (impact) to define a vertex in a graph.  
+usages:  
+`>>> from gm.main_objects.graph import Vertex`  
+`>>> vertex = Vertex(index=0, impact=10)`  
+### Edge  
+implemented in: `./GraphMode/src/gm/main_objects/graph.py`  
+An object having two vertices as the ends and a cost to define an edge in a graph.  
+usages:  
+`>>> from gm.main_objects.graph import Vertex, Edge`  
+`>>> edge = Edge(vertices=(0, 1), cost=3)`  
+### Graph
+implemented in: `./GraphMode/src/gm/main_objects/graph.py`  
+An object having an array of vertices and an array of edges to define the graph.  
+usages:  
+`>>> from gm.main_objects.graph import Edge, Graph, Vertex`  
+`>>> graph = Graph()`  
+`>>> vertices = [Vertex(index=0, impact=10), Vertex(index=1, impact=8)]`  
+`>>> edges = [Edge(vertices=(0, 1), cost=3)]`  
+`>>> graph.vertices = vertices`  
+`>>> graph.edges = edges`  
+
 ## Software DEMO  
-### We provide a main interface to interact with the software package and core function.  
-### Notes: most of the functions are under construction...  
-#### 1, After the installation, head into Python console, and use the main interface to show all the available functions:  
-![pic](show_funcs.png)  
-#### 2, For a specific function, we can import it from the main interface, then invoke it:  
-##### func demo 1 (`hello_world`):  
-![pic](hello_world.png)  
-##### func demo 2 (`Dijkstra_to_find_shortest_paths`):  
-![pic](Dijkstra_to_find_shortest_paths.png)  
+let us first construct a graph using the objects mentioned above:  
+![pic](resources/readme_pics/gm_demo9.png)   
+#### minimum spanning tree + Dijkstra algorithm DEMO:  
+![pic](resources/readme_pics/gm_demo10.png)  
+it worked!  
+the shortest distance from vertex 0 to vertex 0 is 0;  
+the shortest distance from vertex 0 to vertex 1 is 2;  
+the shortest distance from vertex 0 to vertex 2 is 5;  
+the shortest distance from vertex 0 to vertex 3 is 4;  
+#### comparison-based sorting algorithm DEMO:  
+![pic](resources/readme_pics/gm_demo11.png)  
+it worked!  
+The impacts array had been successfully sorted.  
+#### Floyd-Warshall Dynamic Programming DEMO:  
+prepare essential input parameters related to the graph mentioned above:  
+![pic](resources/readme_pics/gm_demo12.png)  
+it worked!  
+![pic](resources/readme_pics/gm_demo13.png)  
