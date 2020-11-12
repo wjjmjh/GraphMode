@@ -10,6 +10,7 @@ def _wrapping_refreshing(func):
     return wrapped
 
 
+# A manager that efficiently manages paths in this repo.
 class repoPathManager:
     def __init__(self):
         self.base = ""
