@@ -2142,7 +2142,7 @@ static PyObject *__pyx_codeobj__27;
 
 /* Python wrapper */
 static PyObject *__pyx_pw_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_2gm_19dynamic_programming_dynamic_programming_to_find_the_shortest_path[] = "\n    Description:\n    A function that takes a generated distance matrix from a Graph object, and applies the\n    Floyd-Warshall Algorithm and dynamic programming to find the shortest path.\n\n    Input parameters:\n    dist_matrix: A dictionary that represents a distance matrix;\n    src_vertex: an Integer ID of a specified vertex as the source;\n    dest_vertex: an Integer ID of a specified vertex as the destination;\n\n    Return:\n    an array of vertices that represents the shortest path between the source vertex and the\n    destination vertex.\n    ";
+static char __pyx_doc_2gm_19dynamic_programming_dynamic_programming_to_find_the_shortest_path[] = "\n    Description:\n    A function that performs Floyd-Warshall Algorithm and dynamic programming to find the shortest path\n    from one vertex to another.\n\n    Floyd-Warshall + dynamic programming algorithms have been implemented here:\n    1, Floyd-Warshall algorithm can find shortest distances between any pair of vertices of\n    either a positive-weighted graph or a negative-weighted graph;\n    2, The implementation of algorithm is succinct; with the help of dynamic programming approaches,\n    the lines of codes can be efficiently reduced, and the process can be refined by referring to previously\n    calculated values;\n    3, Given the context that this functionality will be used to help two researchers connect with each other\n    in a graph, but those two researchers usually come from two different clusters or sub-graphs. Floyd-Warshall\n    algorithm can help find the shortest path in such situation, a distributed system, or graph of graphs;\n    4, The purpose of this functionality is to compute an array of vertices to show the shortest path from one vertex to another,\n    so we need consider the complexity of path re-construction factor. Fortunately, the implementation of path re-construction\n    is fairly easy along with the construction of Floyd-Warshall algorithm that we pass an initialised array as an input\n    parameter to store \"foot prints\" while the algorithm execution. Then, it's straight-forward to extract the shortest path\n    from this array.\n\n\n    Input parameters:\n    from_vertex: the vertex from which the shortest path starts: source vertex;\n    to_vertex: the vertex at which the shortest path ends: destination vertex;\n    path: an initialised array to store the shortest path;\n    n: the number of vertices in the graph + 1;\n    dist: distance matrix;\n    foot_print: an initialised array that keeps track of \"foot prints\" while algorithm execution,\n    and used for shortest path reconstruction.\n\n    Return:\n    an ar""ray of vertex indices that represents the shortest path between the source vertex and the\n    destination vertex.\n    ";
 static PyMethodDef __pyx_mdef_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path = {"dynamic_programming_to_find_the_shortest_path", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path, METH_VARARGS|METH_KEYWORDS, __pyx_doc_2gm_19dynamic_programming_dynamic_programming_to_find_the_shortest_path};
 static PyObject *__pyx_pw_2gm_19dynamic_programming_1dynamic_programming_to_find_the_shortest_path(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   int __pyx_v_from_vertex;
@@ -2281,7 +2281,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("dynamic_programming_to_find_the_shortest_path", 0);
 
-  /* "gm/dynamic_programming.pyx":27
+  /* "gm/dynamic_programming.pyx":47
  *     cdef int k, i, j, next_append_index
  * 
  *     for k in range(n):             # <<<<<<<<<<<<<<
@@ -2293,7 +2293,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_k = __pyx_t_3;
 
-    /* "gm/dynamic_programming.pyx":28
+    /* "gm/dynamic_programming.pyx":48
  * 
  *     for k in range(n):
  *         for i in range(n):             # <<<<<<<<<<<<<<
@@ -2305,7 +2305,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "gm/dynamic_programming.pyx":29
+      /* "gm/dynamic_programming.pyx":49
  *     for k in range(n):
  *         for i in range(n):
  *             for j in range(n):             # <<<<<<<<<<<<<<
@@ -2317,7 +2317,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
       for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
         __pyx_v_j = __pyx_t_9;
 
-        /* "gm/dynamic_programming.pyx":30
+        /* "gm/dynamic_programming.pyx":50
  *         for i in range(n):
  *             for j in range(n):
  *                 if dist[i][j] >= dist[i][k] + dist[k][j]:             # <<<<<<<<<<<<<<
@@ -2337,7 +2337,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
         } else if (unlikely(__pyx_t_11 >= __pyx_v_dist.shape[1])) __pyx_t_12 = 1;
         if (unlikely(__pyx_t_12 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_12);
-          __PYX_ERR(0, 30, __pyx_L1_error)
+          __PYX_ERR(0, 50, __pyx_L1_error)
         }
         __pyx_t_13 = __pyx_v_i;
         __pyx_t_14 = __pyx_v_k;
@@ -2352,7 +2352,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
         } else if (unlikely(__pyx_t_14 >= __pyx_v_dist.shape[1])) __pyx_t_12 = 1;
         if (unlikely(__pyx_t_12 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_12);
-          __PYX_ERR(0, 30, __pyx_L1_error)
+          __PYX_ERR(0, 50, __pyx_L1_error)
         }
         __pyx_t_15 = __pyx_v_k;
         __pyx_t_16 = __pyx_v_j;
@@ -2367,12 +2367,12 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
         } else if (unlikely(__pyx_t_16 >= __pyx_v_dist.shape[1])) __pyx_t_12 = 1;
         if (unlikely(__pyx_t_12 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_12);
-          __PYX_ERR(0, 30, __pyx_L1_error)
+          __PYX_ERR(0, 50, __pyx_L1_error)
         }
         __pyx_t_17 = (((*((double *) ( /* dim=1 */ ((char *) (((double *) ( /* dim=0 */ (__pyx_v_dist.data + __pyx_t_10 * __pyx_v_dist.strides[0]) )) + __pyx_t_11)) ))) >= ((*((double *) ( /* dim=1 */ ((char *) (((double *) ( /* dim=0 */ (__pyx_v_dist.data + __pyx_t_13 * __pyx_v_dist.strides[0]) )) + __pyx_t_14)) ))) + (*((double *) ( /* dim=1 */ ((char *) (((double *) ( /* dim=0 */ (__pyx_v_dist.data + __pyx_t_15 * __pyx_v_dist.strides[0]) )) + __pyx_t_16)) ))))) != 0);
         if (__pyx_t_17) {
 
-          /* "gm/dynamic_programming.pyx":31
+          /* "gm/dynamic_programming.pyx":51
  *             for j in range(n):
  *                 if dist[i][j] >= dist[i][k] + dist[k][j]:
  *                     dist[i][j] = dist[i][k] + dist[k][j]             # <<<<<<<<<<<<<<
@@ -2392,7 +2392,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
           } else if (unlikely(__pyx_t_15 >= __pyx_v_dist.shape[1])) __pyx_t_12 = 1;
           if (unlikely(__pyx_t_12 != -1)) {
             __Pyx_RaiseBufferIndexError(__pyx_t_12);
-            __PYX_ERR(0, 31, __pyx_L1_error)
+            __PYX_ERR(0, 51, __pyx_L1_error)
           }
           __pyx_t_14 = __pyx_v_k;
           __pyx_t_13 = __pyx_v_j;
@@ -2407,7 +2407,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
           } else if (unlikely(__pyx_t_13 >= __pyx_v_dist.shape[1])) __pyx_t_12 = 1;
           if (unlikely(__pyx_t_12 != -1)) {
             __Pyx_RaiseBufferIndexError(__pyx_t_12);
-            __PYX_ERR(0, 31, __pyx_L1_error)
+            __PYX_ERR(0, 51, __pyx_L1_error)
           }
           __pyx_t_11 = __pyx_v_i;
           __pyx_t_10 = __pyx_v_j;
@@ -2422,11 +2422,11 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
           } else if (unlikely(__pyx_t_10 >= __pyx_v_dist.shape[1])) __pyx_t_12 = 1;
           if (unlikely(__pyx_t_12 != -1)) {
             __Pyx_RaiseBufferIndexError(__pyx_t_12);
-            __PYX_ERR(0, 31, __pyx_L1_error)
+            __PYX_ERR(0, 51, __pyx_L1_error)
           }
           *((double *) ( /* dim=1 */ ((char *) (((double *) ( /* dim=0 */ (__pyx_v_dist.data + __pyx_t_11 * __pyx_v_dist.strides[0]) )) + __pyx_t_10)) )) = ((*((double *) ( /* dim=1 */ ((char *) (((double *) ( /* dim=0 */ (__pyx_v_dist.data + __pyx_t_16 * __pyx_v_dist.strides[0]) )) + __pyx_t_15)) ))) + (*((double *) ( /* dim=1 */ ((char *) (((double *) ( /* dim=0 */ (__pyx_v_dist.data + __pyx_t_14 * __pyx_v_dist.strides[0]) )) + __pyx_t_13)) ))));
 
-          /* "gm/dynamic_programming.pyx":32
+          /* "gm/dynamic_programming.pyx":52
  *                 if dist[i][j] >= dist[i][k] + dist[k][j]:
  *                     dist[i][j] = dist[i][k] + dist[k][j]
  *                     if dist[i][j] < float("inf"):             # <<<<<<<<<<<<<<
@@ -2446,13 +2446,13 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
           } else if (unlikely(__pyx_t_14 >= __pyx_v_dist.shape[1])) __pyx_t_12 = 1;
           if (unlikely(__pyx_t_12 != -1)) {
             __Pyx_RaiseBufferIndexError(__pyx_t_12);
-            __PYX_ERR(0, 32, __pyx_L1_error)
+            __PYX_ERR(0, 52, __pyx_L1_error)
           }
-          __pyx_t_18 = __Pyx_PyObject_AsDouble(__pyx_n_s_inf); if (unlikely(__pyx_t_18 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 32, __pyx_L1_error)
+          __pyx_t_18 = __Pyx_PyObject_AsDouble(__pyx_n_s_inf); if (unlikely(__pyx_t_18 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L1_error)
           __pyx_t_17 = (((*((double *) ( /* dim=1 */ ((char *) (((double *) ( /* dim=0 */ (__pyx_v_dist.data + __pyx_t_13 * __pyx_v_dist.strides[0]) )) + __pyx_t_14)) ))) < __pyx_t_18) != 0);
           if (__pyx_t_17) {
 
-            /* "gm/dynamic_programming.pyx":33
+            /* "gm/dynamic_programming.pyx":53
  *                     dist[i][j] = dist[i][k] + dist[k][j]
  *                     if dist[i][j] < float("inf"):
  *                         foot_print[i][j] = foot_print[i][k]             # <<<<<<<<<<<<<<
@@ -2472,7 +2472,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
             } else if (unlikely(__pyx_t_13 >= __pyx_v_foot_print.shape[1])) __pyx_t_12 = 1;
             if (unlikely(__pyx_t_12 != -1)) {
               __Pyx_RaiseBufferIndexError(__pyx_t_12);
-              __PYX_ERR(0, 33, __pyx_L1_error)
+              __PYX_ERR(0, 53, __pyx_L1_error)
             }
             __pyx_t_15 = __pyx_v_i;
             __pyx_t_16 = __pyx_v_j;
@@ -2487,11 +2487,11 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
             } else if (unlikely(__pyx_t_16 >= __pyx_v_foot_print.shape[1])) __pyx_t_12 = 1;
             if (unlikely(__pyx_t_12 != -1)) {
               __Pyx_RaiseBufferIndexError(__pyx_t_12);
-              __PYX_ERR(0, 33, __pyx_L1_error)
+              __PYX_ERR(0, 53, __pyx_L1_error)
             }
             *((long *) ( /* dim=1 */ ((char *) (((long *) ( /* dim=0 */ (__pyx_v_foot_print.data + __pyx_t_15 * __pyx_v_foot_print.strides[0]) )) + __pyx_t_16)) )) = (*((long *) ( /* dim=1 */ ((char *) (((long *) ( /* dim=0 */ (__pyx_v_foot_print.data + __pyx_t_14 * __pyx_v_foot_print.strides[0]) )) + __pyx_t_13)) )));
 
-            /* "gm/dynamic_programming.pyx":32
+            /* "gm/dynamic_programming.pyx":52
  *                 if dist[i][j] >= dist[i][k] + dist[k][j]:
  *                     dist[i][j] = dist[i][k] + dist[k][j]
  *                     if dist[i][j] < float("inf"):             # <<<<<<<<<<<<<<
@@ -2500,7 +2500,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
  */
           }
 
-          /* "gm/dynamic_programming.pyx":30
+          /* "gm/dynamic_programming.pyx":50
  *         for i in range(n):
  *             for j in range(n):
  *                 if dist[i][j] >= dist[i][k] + dist[k][j]:             # <<<<<<<<<<<<<<
@@ -2512,7 +2512,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
     }
   }
 
-  /* "gm/dynamic_programming.pyx":34
+  /* "gm/dynamic_programming.pyx":54
  *                     if dist[i][j] < float("inf"):
  *                         foot_print[i][j] = foot_print[i][k]
  *     if foot_print[from_vertex][to_vertex] == -1:             # <<<<<<<<<<<<<<
@@ -2532,12 +2532,12 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
   } else if (unlikely(__pyx_t_14 >= __pyx_v_foot_print.shape[1])) __pyx_t_1 = 1;
   if (unlikely(__pyx_t_1 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_1);
-    __PYX_ERR(0, 34, __pyx_L1_error)
+    __PYX_ERR(0, 54, __pyx_L1_error)
   }
   __pyx_t_17 = (((*((long *) ( /* dim=1 */ ((char *) (((long *) ( /* dim=0 */ (__pyx_v_foot_print.data + __pyx_t_13 * __pyx_v_foot_print.strides[0]) )) + __pyx_t_14)) ))) == -1L) != 0);
   if (__pyx_t_17) {
 
-    /* "gm/dynamic_programming.pyx":35
+    /* "gm/dynamic_programming.pyx":55
  *                         foot_print[i][j] = foot_print[i][k]
  *     if foot_print[from_vertex][to_vertex] == -1:
  *         return []             # <<<<<<<<<<<<<<
@@ -2545,13 +2545,13 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
  *     path[next_append_index] = from_vertex
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_19 = PyList_New(0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __pyx_t_19 = PyList_New(0); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_19);
     __pyx_r = __pyx_t_19;
     __pyx_t_19 = 0;
     goto __pyx_L0;
 
-    /* "gm/dynamic_programming.pyx":34
+    /* "gm/dynamic_programming.pyx":54
  *                     if dist[i][j] < float("inf"):
  *                         foot_print[i][j] = foot_print[i][k]
  *     if foot_print[from_vertex][to_vertex] == -1:             # <<<<<<<<<<<<<<
@@ -2560,7 +2560,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
  */
   }
 
-  /* "gm/dynamic_programming.pyx":36
+  /* "gm/dynamic_programming.pyx":56
  *     if foot_print[from_vertex][to_vertex] == -1:
  *         return []
  *     next_append_index = 0             # <<<<<<<<<<<<<<
@@ -2569,7 +2569,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
  */
   __pyx_v_next_append_index = 0;
 
-  /* "gm/dynamic_programming.pyx":37
+  /* "gm/dynamic_programming.pyx":57
  *         return []
  *     next_append_index = 0
  *     path[next_append_index] = from_vertex             # <<<<<<<<<<<<<<
@@ -2584,11 +2584,11 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
   } else if (unlikely(__pyx_t_14 >= __pyx_v_path.shape[0])) __pyx_t_1 = 0;
   if (unlikely(__pyx_t_1 != -1)) {
     __Pyx_RaiseBufferIndexError(__pyx_t_1);
-    __PYX_ERR(0, 37, __pyx_L1_error)
+    __PYX_ERR(0, 57, __pyx_L1_error)
   }
   *((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_path.data) + __pyx_t_14)) )) = __pyx_v_from_vertex;
 
-  /* "gm/dynamic_programming.pyx":38
+  /* "gm/dynamic_programming.pyx":58
  *     next_append_index = 0
  *     path[next_append_index] = from_vertex
  *     next_append_index += 1             # <<<<<<<<<<<<<<
@@ -2597,7 +2597,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
  */
   __pyx_v_next_append_index = (__pyx_v_next_append_index + 1);
 
-  /* "gm/dynamic_programming.pyx":39
+  /* "gm/dynamic_programming.pyx":59
  *     path[next_append_index] = from_vertex
  *     next_append_index += 1
  *     while from_vertex != to_vertex:             # <<<<<<<<<<<<<<
@@ -2608,7 +2608,7 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
     __pyx_t_17 = ((__pyx_v_from_vertex != __pyx_v_to_vertex) != 0);
     if (!__pyx_t_17) break;
 
-    /* "gm/dynamic_programming.pyx":40
+    /* "gm/dynamic_programming.pyx":60
  *     next_append_index += 1
  *     while from_vertex != to_vertex:
  *         from_vertex = foot_print[from_vertex][to_vertex]             # <<<<<<<<<<<<<<
@@ -2628,11 +2628,11 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
     } else if (unlikely(__pyx_t_13 >= __pyx_v_foot_print.shape[1])) __pyx_t_1 = 1;
     if (unlikely(__pyx_t_1 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_1);
-      __PYX_ERR(0, 40, __pyx_L1_error)
+      __PYX_ERR(0, 60, __pyx_L1_error)
     }
     __pyx_v_from_vertex = (*((long *) ( /* dim=1 */ ((char *) (((long *) ( /* dim=0 */ (__pyx_v_foot_print.data + __pyx_t_14 * __pyx_v_foot_print.strides[0]) )) + __pyx_t_13)) )));
 
-    /* "gm/dynamic_programming.pyx":41
+    /* "gm/dynamic_programming.pyx":61
  *     while from_vertex != to_vertex:
  *         from_vertex = foot_print[from_vertex][to_vertex]
  *         path[next_append_index] = from_vertex             # <<<<<<<<<<<<<<
@@ -2647,11 +2647,11 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
     } else if (unlikely(__pyx_t_13 >= __pyx_v_path.shape[0])) __pyx_t_1 = 0;
     if (unlikely(__pyx_t_1 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_1);
-      __PYX_ERR(0, 41, __pyx_L1_error)
+      __PYX_ERR(0, 61, __pyx_L1_error)
     }
     *((long *) ( /* dim=0 */ ((char *) (((long *) __pyx_v_path.data) + __pyx_t_13)) )) = __pyx_v_from_vertex;
 
-    /* "gm/dynamic_programming.pyx":42
+    /* "gm/dynamic_programming.pyx":62
  *         from_vertex = foot_print[from_vertex][to_vertex]
  *         path[next_append_index] = from_vertex
  *         next_append_index += 1             # <<<<<<<<<<<<<<
@@ -2660,13 +2660,13 @@ static PyObject *__pyx_pf_2gm_19dynamic_programming_dynamic_programming_to_find_
     __pyx_v_next_append_index = (__pyx_v_next_append_index + 1);
   }
 
-  /* "gm/dynamic_programming.pyx":43
+  /* "gm/dynamic_programming.pyx":63
  *         path[next_append_index] = from_vertex
  *         next_append_index += 1
  *     return path             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_19 = __pyx_memoryview_fromslice(__pyx_v_path, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_19 = __pyx_memoryview_fromslice(__pyx_v_path, 1, (PyObject *(*)(char *)) __pyx_memview_get_long, (int (*)(char *, PyObject *)) __pyx_memview_set_long, 0);; if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_19);
   __pyx_r = __pyx_t_19;
   __pyx_t_19 = 0;
@@ -16578,7 +16578,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 47, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 133, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 148, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 151, __pyx_L1_error)
