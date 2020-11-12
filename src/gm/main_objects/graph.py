@@ -122,3 +122,9 @@ class Graph:
         edges = [e.to_str() for e in self._edges]
         write_txt(vertices, "vertices")
         write_txt(edges, "edges")
+
+    def to_combined_txt(self, fn):
+        vertices = [v.to_str() for v in self._vertices]
+        edges = [e.to_str() for e in self._edges]
+        lines = vertices + edges
+        write_txt(lines, fn)
