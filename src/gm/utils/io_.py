@@ -51,6 +51,25 @@ def read_graph_from_txt_files(vertices_txt, edges_txt):
     return g
 
 
+def read_graph_from_combined_txt_files(combined):
+    from gm.main_objects.graph import Edge, Graph, Vertex
+
+    vertices = [
+        Vertex(line.split(" ")[0], line.split(" ")[1])
+        for line in read_txt(combined)
+        if len(line.split(" ")) == 2
+    ]
+    edges = [
+        Edge((line.split(" ")[0], line.split(" ")[1]), line.split(" ")[2])
+        for line in read_txt(combined)
+        if len(line.split(" ")) == 3
+    ]
+    g = Graph()
+    g.vertices = vertices
+    g.edges = edges
+    return g
+
+
 def read_vertices_from_txt_files(vertices_txt):
     from gm.main_objects.graph import Vertex
 
