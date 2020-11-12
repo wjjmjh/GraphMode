@@ -3,7 +3,8 @@ import random
 import numpy
 
 from gm.main_objects.graph import Edge, Graph, Vertex
-from gm.utils.io_ import read_graph_from_txt_files
+from gm.utils.io_ import (read_graph_from_combined_txt_files,
+                          read_graph_from_txt_files)
 
 
 def generate_vertices_with_impacts(number_of_vertices, min_impact, max_impact):
@@ -95,6 +96,19 @@ class GraphConstructor:
         :return: a constructed Graph object.
         """
         got = read_graph_from_txt_files(vertices_input_txt, edges_input_txt)
+        self.graph = got
+        return got
+
+    def graph_from_combined_file(self, combined_txt):
+        """
+        construct a graph from one single txt file.
+        :param combined_txt: a txt file has both vertex data and edge data
+        if the row has two columns, it's supposed to e vertex data that first column is the index and second column is impact
+        if the row has three columns, it's supposed to be a edge data that the first two columns are indices of two connected
+        vertices and the third column is the associated cost.
+        :return: a constructed Graph object.
+        """
+        got = read_graph_from_combined_txt_files(combined_txt)
         self.graph = got
         return got
 
