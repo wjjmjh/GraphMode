@@ -29,7 +29,11 @@ def sort_impacts_based_on_comparison(impacts):
 def sort_vertices_based_on_comparison(vertices, impacts):
     sort_impacts_based_on_comparison(impacts)
     sorted_impacts_with_no_duplicates = []
-    [sorted_impacts_with_no_duplicates.append(x) for x in impacts if x not in sorted_impacts_with_no_duplicates]
+    [
+        sorted_impacts_with_no_duplicates.append(x)
+        for x in impacts
+        if x not in sorted_impacts_with_no_duplicates
+    ]
     sorted_vertices = []
     for impact in sorted_impacts_with_no_duplicates:
         sorted_vertices += vertices[impact]

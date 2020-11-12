@@ -3,7 +3,7 @@ from gm.utils.io_ import write_txt
 
 class Vertex:
     """
-    An object having an ID and a weight to define a vertex in a graph.
+    An object having an ID (index) and a weight (impact) to define a vertex in a graph.
     """
 
     def __init__(self, index, impact):
@@ -34,7 +34,7 @@ class Vertex:
 
 class Edge:
     """
-    An object having two vertices as the ends and a weight to define an edge in a graph.
+    An object having two vertices as the ends and a cost to define an edge in a graph.
     """
 
     def __init__(self, vertices, cost):
@@ -74,12 +74,7 @@ class Edge:
 
 class Graph:
     """
-    An object having an array of vertices and an array of edges to define the graph. Graph
-    object also contains basic methods.
-
-    potential methods to be implemented:
-    func compute_distance_matrix: returns a distance matrix based on existing vertices and edges on the
-    graph.
+    An object having an array of vertices and an array of edges to define the graph.
     """
 
     def __init__(self):
