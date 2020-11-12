@@ -46,7 +46,7 @@ class repoPathManager:
     @property
     def test_data(self):
         self.find_root()
-        return self.combine("tests", "test_data")
+        return self.combine("tests", "data")
 
     @property
     def dp_test_data(self):
