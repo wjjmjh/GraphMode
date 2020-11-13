@@ -69,6 +69,8 @@ usages:
 `>>> graph.edges = edges`  
 
 ## Software DEMO  
+#### Option 1: Test or assess algorithms by custom objects  
+#### Detailed docstrings about explanations have been added in each implementation file.
 let us first construct a graph using the objects mentioned above:  
 ![pic](resources/readme_pics/gm_demo9.png)   
 #### minimum spanning tree + Dijkstra algorithm DEMO:  
@@ -86,4 +88,17 @@ The impacts array had been successfully sorted.
 prepare essential input parameters related to the graph mentioned above:  
 ![pic](resources/readme_pics/gm_demo12.png)  
 it worked!  
-![pic](resources/readme_pics/gm_demo13.png)  
+![pic](resources/readme_pics/gm_demo13.png) 
+
+#### Option 2: If the above was overwhelming, we can also test or assess algorithms using prepared data sets.  
+#### data sets can be found in `./GraphMode/tests/data` (5 data sets for each functionality)  
+You just need:  
+1, Activate the conda environment (`graph_mode_conda_env`);  
+2, Import a function `test` from `gm.main`;  
+3, Invoke func `test` with passing the path to the test txt file you interested. :)  
+#### minimum spanning tree + Dijkstra algorithm DEMO:  
+![pic](resources/readme_pics/gm_demo14.png)  
+#### comparison-based sorting algorithm DEMO:  
+![pic](resources/readme_pics/gm_demo15.png)  
+#### Floyd-Warshall Dynamic Programming DEMO:  
+![pic](resources/readme_pics/gm_demo16.png)  
