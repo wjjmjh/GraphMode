@@ -108,9 +108,11 @@ You just need:
 #### Feel free to inspect it to know what's going on :) 
 ### Testing  
 1, first you need to install the project as a developer (instructions added above in section `Installation`);  
-2, head into the project:  
+2, activate the conda environment:  
+`conda activate graph_mode_conda_env`
+3, head into the project:  
 `>>> cd ./GraphMode/`  
-3, execute Pytest:  
+4, execute Pytest:  
 `>>> pytest tests`  
 #### DEMO:  
  ![pic](resources/readme_pics/gm_demo18.png)  
