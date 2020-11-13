@@ -10,9 +10,14 @@
 Python package-management system: `pip`  
 ![pic](resources/readme_pics/gm_demo4.png)   
 #### Commands:  
+`pip install Cython`  
+This will install a Cython compiler for you :)  
 `pip install ./GraphMode/`  
 This command will do everything for ya!  
 It will compile necessary Python codes into C codes and set up the software.  
+
+you may see something like "ERROR: After October 2020 you may experience..."  Please ignore that.  
+
 ![pic](resources/readme_pics/gm_demo1.png)    
 
 ### If you are a developer (If you wanna hack codes or run the tests using pytest):    
