@@ -72,7 +72,7 @@ usages:
 #### Option 1: Test or assess algorithms by custom objects  
 #### Detailed docstrings about explanations have been added in each implementation file.
 let us first construct a graph using the objects mentioned above:  
-![pic](resources/readme_pics/gm_demo9.png)   
+![pic](resources/readme_pics/gm_demo17.png)   
 #### minimum spanning tree + Dijkstra algorithm DEMO:  
 ![pic](resources/readme_pics/gm_demo10.png)  
 it worked!  
@@ -102,3 +102,15 @@ You just need:
 ![pic](resources/readme_pics/gm_demo15.png)  
 #### Floyd-Warshall Dynamic Programming DEMO:  
 ![pic](resources/readme_pics/gm_demo16.png)  
+
+## Pytest  
+#### All the logic, instructions and explanations have been added in detailed docstrings in  `./GraphMode/tests`  
+#### Feel free to inspect it to know what's going on :) 
+### Testing  
+1, first you need to install the project as a developer (instructions added above in section `Installation`);  
+2, head into the project:  
+`>>> cd ./GraphMode/`  
+3, execute Pytest:  
+`>>> pytest tests`  
+#### DEMO:  
+ ![pic](resources/readme_pics/gm_demo18.png)  
